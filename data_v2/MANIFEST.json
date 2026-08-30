@@ -1,0 +1,102 @@
+{
+  "dataset_version": "v2.0.0-alpha",
+  "packet_count": 12,
+  "synthetic_only": true,
+  "profiles": [
+    "startup",
+    "enterprise",
+    "small_team"
+  ],
+  "role_families": [
+    "backend_platform",
+    "product_engineering",
+    "data_ml_infrastructure",
+    "security_reliability"
+  ],
+  "packets": [
+    {
+      "packet_id": "001",
+      "profile_id": "startup",
+      "role_family": "backend_platform",
+      "evidence_condition": "contradiction",
+      "assessment_present": true
+    },
+    {
+      "packet_id": "002",
+      "profile_id": "enterprise",
+      "role_family": "product_engineering",
+      "evidence_condition": "clean",
+      "assessment_present": true
+    },
+    {
+      "packet_id": "003",
+      "profile_id": "small_team",
+      "role_family": "data_ml_infrastructure",
+      "evidence_condition": "missing_assessment",
+      "assessment_present": false
+    },
+    {
+      "packet_id": "004",
+      "profile_id": "startup",
+      "role_family": "security_reliability",
+      "evidence_condition": "ambiguous_scope",
+      "assessment_present": true
+    },
+    {
+      "packet_id": "005",
+      "profile_id": "enterprise",
+      "role_family": "backend_platform",
+      "evidence_condition": "timeline_inconsistency",
+      "assessment_present": true
+    },
+    {
+      "packet_id": "006",
+      "profile_id": "small_team",
+      "role_family": "product_engineering",
+      "evidence_condition": "stale_assessment",
+      "assessment_present": true
+    },
+    {
+      "packet_id": "007",
+      "profile_id": "startup",
+      "role_family": "data_ml_infrastructure",
+      "evidence_condition": "hard_negative",
+      "assessment_present": true
+    },
+    {
+      "packet_id": "008",
+      "profile_id": "enterprise",
+      "role_family": "security_reliability",
+      "evidence_condition": "clean",
+      "assessment_present": true
+    },
+    {
+      "packet_id": "009",
+      "profile_id": "small_team",
+      "role_family": "backend_platform",
+      "evidence_condition": "contradiction",
+      "assessment_present": true
+    },
+    {
+      "packet_id": "010",
+      "profile_id": "startup",
+      "role_family": "product_engineering",
+      "evidence_condition": "clean",
+      "assessment_present": true
+    },
+    {
+      "packet_id": "011",
+      "profile_id": "enterprise",
+      "role_family": "data_ml_infrastructure",
+      "evidence_condition": "ambiguous_scope",
+      "assessment_present": true
+    },
+    {
+      "packet_id": "012",
+      "profile_id": "small_team",
+      "role_family": "security_reliability",
+      "evidence_condition": "clean",
+      "assessment_present": true
+    }
+  ]
+}

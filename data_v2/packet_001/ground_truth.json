@@ -1,0 +1,11 @@
+{
+  "packet_id": "001",
+  "profile_id": "startup",
+  "role_family": "backend_platform",
+  "evidence_condition": "contradiction",
+  "assessment_present": true,
+  "synthetic_only": true,
+  "notes": [
+    "CV inflates direct ownership relative to transcript."
+  ]
+}

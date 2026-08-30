@@ -1,0 +1,22 @@
+{
+  "profile_id": "enterprise",
+  "display_name": "Enterprise \u2014 scale and governance",
+  "version": "v2.1",
+  "context": "Large engineering organization with defined interfaces, reliability targets, compliance controls, and cross-team delivery.",
+  "evidence_policies": {
+    "must_have": [
+      "production reliability",
+      "cross-team execution",
+      "change management"
+    ],
+    "preferred": [
+      "regulated systems",
+      "incident leadership",
+      "architecture governance"
+    ],
+    "review_questions": [
+      "What evidence supports sustained ownership at organizational scale?",
+      "Which claims are firsthand and which describe team outcomes?"
+    ]
+  }
+}

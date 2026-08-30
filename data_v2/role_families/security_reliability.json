@@ -1,0 +1,14 @@
+{
+  "role_family": "security_reliability",
+  "title": "Security / Reliability Engineer",
+  "must_have": [
+    "incident response",
+    "secure service operation",
+    "automation or infrastructure as code"
+  ],
+  "preferred": [
+    "threat modeling",
+    "SLO design",
+    "compliance evidence"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "packet_id": "008",
+  "profile_id": "enterprise",
+  "role_family": "security_reliability",
+  "evidence_condition": "clean",
+  "assessment_present": true,
+  "synthetic_only": true,
+  "notes": []
+}

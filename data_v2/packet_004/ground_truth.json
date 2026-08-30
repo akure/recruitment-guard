@@ -1,0 +1,11 @@
+{
+  "packet_id": "004",
+  "profile_id": "startup",
+  "role_family": "security_reliability",
+  "evidence_condition": "ambiguous_scope",
+  "assessment_present": true,
+  "synthetic_only": true,
+  "notes": [
+    "Scope language is ambiguous and requires reviewer clarification, not an automatic contradiction."
+  ]
+}

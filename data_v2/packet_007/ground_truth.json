@@ -1,0 +1,11 @@
+{
+  "packet_id": "007",
+  "profile_id": "startup",
+  "role_family": "data_ml_infrastructure",
+  "evidence_condition": "hard_negative",
+  "assessment_present": true,
+  "synthetic_only": true,
+  "notes": [
+    "Careful uncertainty is a hard negative, not a contradiction."
+  ]
+}

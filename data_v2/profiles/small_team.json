@@ -1,0 +1,22 @@
+{
+  "profile_id": "small_team",
+  "display_name": "Small team \u2014 hands-on breadth",
+  "version": "v2.1",
+  "context": "Lean team with few layers, direct communication, high individual contribution, and limited redundancy.",
+  "evidence_policies": {
+    "must_have": [
+      "hands-on implementation",
+      "independent delivery",
+      "clear communication"
+    ],
+    "preferred": [
+      "on-call ownership",
+      "product partnership",
+      "pragmatic trade-offs"
+    ],
+    "review_questions": [
+      "Which deliverables did the candidate implement directly?",
+      "Where does the record distinguish breadth from unsupported self-description?"
+    ]
+  }
+}

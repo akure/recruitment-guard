@@ -1,0 +1,9 @@
+{
+  "packet_id": "010",
+  "profile_id": "startup",
+  "role_family": "product_engineering",
+  "evidence_condition": "clean",
+  "assessment_present": true,
+  "synthetic_only": true,
+  "notes": []
+}

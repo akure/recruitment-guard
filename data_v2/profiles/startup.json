@@ -1,0 +1,22 @@
+{
+  "profile_id": "startup",
+  "display_name": "Startup \u2014 broad ownership",
+  "version": "v2.1",
+  "context": "Small product organization with fast iteration, ambiguous ownership, and limited specialization.",
+  "evidence_policies": {
+    "must_have": [
+      "end-to-end delivery",
+      "adaptability under ambiguity",
+      "operational judgment"
+    ],
+    "preferred": [
+      "payments or marketplace exposure",
+      "mentoring",
+      "rapid iteration"
+    ],
+    "review_questions": [
+      "What did the candidate personally own versus influence?",
+      "Which operating trade-offs were made under incomplete information?"
+    ]
+  }
+}

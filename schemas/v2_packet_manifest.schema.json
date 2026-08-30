@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RecruitmentGuardV2PacketManifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["dataset_version", "packet_count", "synthetic_only", "profiles", "role_families", "packets"],
+  "properties": {
+    "dataset_version": {"const": "v2.0.0-alpha"},
+    "packet_count": {"type": "integer", "const": 12},
+    "synthetic_only": {"const": true},
+    "profiles": {"type": "array", "items": {"enum": ["startup", "enterprise", "small_team"]}},
+    "role_families": {"type": "array", "items": {"enum": ["backend_platform", "product_engineering", "data_ml_infrastructure", "security_reliability"]}},
+    "packets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["packet_id", "profile_id", "role_family", "evidence_condition", "assessment_present"],
+        "properties": {
+          "packet_id": {"type": "string", "pattern": "^[0-9]{3}$"},
+          "profile_id": {"enum": ["startup", "enterprise", "small_team"]},
+          "role_family": {"enum": ["backend_platform", "product_engineering", "data_ml_infrastructure", "security_reliability"]},
+          "evidence_condition": {"enum": ["clean", "contradiction", "missing_assessment", "stale_assessment", "ambiguous_scope", "timeline_inconsistency", "hard_negative"]},
+          "assessment_present": {"type": "boolean"}
+        }
+      }
+    }
+  }
+}

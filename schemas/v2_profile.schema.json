@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RecruitmentGuardV2Profile",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["profile_id", "display_name", "version", "context", "evidence_policies"],
+  "properties": {
+    "profile_id": {"type": "string", "enum": ["startup", "enterprise", "small_team"]},
+    "display_name": {"type": "string"},
+    "version": {"type": "string", "pattern": "^v2\\.[0-9]+$"},
+    "context": {"type": "string"},
+    "evidence_policies": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["must_have", "preferred", "review_questions"],
+      "properties": {
+        "must_have": {"type": "array", "items": {"type": "string"}},
+        "preferred": {"type": "array", "items": {"type": "string"}},
+        "review_questions": {"type": "array", "items": {"type": "string"}}
+      }
+    }
+  }
+}

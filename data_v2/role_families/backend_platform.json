@@ -1,0 +1,14 @@
+{
+  "role_family": "backend_platform",
+  "title": "Backend / Platform Engineer",
+  "must_have": [
+    "production API or service ownership",
+    "Python, Go, or Java",
+    "distributed systems fundamentals"
+  ],
+  "preferred": [
+    "observability",
+    "event-driven systems",
+    "cloud cost awareness"
+  ]
+}

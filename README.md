@@ -106,6 +106,7 @@ data/packet_NN
 
 - [Approved problem brief](docs/01-problem-statement.md)
 - [V2 maturity roadmap](docs/V2-MATURITY-ROADMAP.md)
+- [V2 scope and compatibility contract](docs/V2-SCOPE-AND-COMPATIBILITY.md)
 - [Changelog](CHANGELOG.md)
 
-Reproduction commands, evaluation results, trajectories, human checkpoint mechanics, and the video outline will be added in subsequent sprint checkpoints.
+V2 Milestone 1 is now available under `data_v2/`. Generate the deterministic realistic-but-fictional benchmark with `python3 scripts/generate_data_v2.py`. It produces 12 packets across startup, enterprise, and small-team profiles and four role families, with clean, contradiction, missing/stale evidence, ambiguous-scope, timeline, and hard-negative conditions. V1 remains frozen and byte-identical to the `v1.0.0` release; see the [V2 scope and compatibility contract](docs/V2-SCOPE-AND-COMPATIBILITY.md).

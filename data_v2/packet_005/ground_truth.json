@@ -1,0 +1,11 @@
+{
+  "packet_id": "005",
+  "profile_id": "enterprise",
+  "role_family": "backend_platform",
+  "evidence_condition": "timeline_inconsistency",
+  "assessment_present": true,
+  "synthetic_only": true,
+  "notes": [
+    "Overlapping dates require timeline review."
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "packet_id": "003",
+  "profile_id": "small_team",
+  "role_family": "data_ml_infrastructure",
+  "evidence_condition": "missing_assessment",
+  "assessment_present": false,
+  "synthetic_only": true,
+  "notes": [
+    "Assessment is intentionally absent."
+  ]
+}

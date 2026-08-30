@@ -1,0 +1,9 @@
+{
+  "packet_id": "012",
+  "profile_id": "small_team",
+  "role_family": "security_reliability",
+  "evidence_condition": "clean",
+  "assessment_present": true,
+  "synthetic_only": true,
+  "notes": []
+}

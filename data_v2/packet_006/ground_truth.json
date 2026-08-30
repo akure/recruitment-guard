@@ -1,0 +1,11 @@
+{
+  "packet_id": "006",
+  "profile_id": "small_team",
+  "role_family": "product_engineering",
+  "evidence_condition": "stale_assessment",
+  "assessment_present": true,
+  "synthetic_only": true,
+  "notes": [
+    "Assessment predates the freshness threshold."
+  ]
+}

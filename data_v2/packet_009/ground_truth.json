@@ -1,0 +1,11 @@
+{
+  "packet_id": "009",
+  "profile_id": "small_team",
+  "role_family": "backend_platform",
+  "evidence_condition": "contradiction",
+  "assessment_present": true,
+  "synthetic_only": true,
+  "notes": [
+    "CV inflates direct ownership relative to transcript."
+  ]
+}

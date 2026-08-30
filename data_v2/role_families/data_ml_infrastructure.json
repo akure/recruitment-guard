@@ -1,0 +1,14 @@
+{
+  "role_family": "data_ml_infrastructure",
+  "title": "Data / ML Infrastructure Engineer",
+  "must_have": [
+    "reliable data pipelines",
+    "Python or Scala",
+    "data quality and lineage"
+  ],
+  "preferred": [
+    "feature stores",
+    "workflow orchestration",
+    "model-serving operations"
+  ]
+}
