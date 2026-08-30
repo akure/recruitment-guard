@@ -90,7 +90,7 @@ def _candidate_evidence(packet: Path, role_family: str) -> list[dict[str, Any]]:
     counter = 1
     for source_doc in ("cv", "transcript"):
         source = (packet / f"{source_doc}.md").read_text(encoding="utf-8")
-        lines = [line for line in source.splitlines() if line.strip().startswith("- ") or line.strip().startswith("**")]
+        lines = [line for line in source.splitlines() if line.strip().startswith("- ") or line.strip().startswith("**") or (source_doc == "cv" and re.search(r"20\d\d[–-]", line))]
         for line in lines:
             text = line.strip()
             if text.startswith("**") and ":**" in text:

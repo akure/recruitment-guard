@@ -1,0 +1,512 @@
+{
+  "records": [
+    {
+      "packet_id": "001",
+      "profile_id": "startup",
+      "role_family": "backend_platform",
+      "condition": "contradiction",
+      "findings": [
+        {
+          "finding_id": "v2-conflicting_evidence-111",
+          "type": "conflicting_evidence",
+          "severity": "block",
+          "message": "Resume ownership language is narrower or inconsistent with the interview account; recruiter review is required.",
+          "evidence_ids": [
+            "e1",
+            "e2",
+            "e3",
+            "e4",
+            "e5",
+            "e6",
+            "e7",
+            "e8",
+            "e9",
+            "e10",
+            "e11",
+            "e12",
+            "e13",
+            "e14"
+          ]
+        },
+        {
+          "finding_id": "v2-uncorroborated_evidence-64",
+          "type": "uncorroborated_evidence",
+          "severity": "review",
+          "message": "Some claims are not corroborated across the available documents.",
+          "evidence_ids": [
+            "e1",
+            "e2",
+            "e4",
+            "e5",
+            "e6",
+            "e7",
+            "e8",
+            "e9",
+            "e10",
+            "e11",
+            "e13"
+          ]
+        }
+      ],
+      "state": "pending_review",
+      "citation_fidelity": 1.0,
+      "review_questions": 2
+    },
+    {
+      "packet_id": "002",
+      "profile_id": "enterprise",
+      "role_family": "product_engineering",
+      "condition": "clean",
+      "findings": [
+        {
+          "finding_id": "v2-uncorroborated_evidence-64",
+          "type": "uncorroborated_evidence",
+          "severity": "review",
+          "message": "Some claims are not corroborated across the available documents.",
+          "evidence_ids": [
+            "e1",
+            "e2",
+            "e3",
+            "e4",
+            "e5",
+            "e6",
+            "e7",
+            "e8",
+            "e9",
+            "e10",
+            "e11",
+            "e13"
+          ]
+        }
+      ],
+      "state": "finalized",
+      "citation_fidelity": 1.0,
+      "review_questions": 2
+    },
+    {
+      "packet_id": "003",
+      "profile_id": "small_team",
+      "role_family": "data_ml_infrastructure",
+      "condition": "missing_assessment",
+      "findings": [
+        {
+          "finding_id": "v2-missing_evidence-41",
+          "type": "missing_evidence",
+          "severity": "block",
+          "message": "No assessment is present for this packet.",
+          "evidence_ids": []
+        },
+        {
+          "finding_id": "v2-uncorroborated_evidence-64",
+          "type": "uncorroborated_evidence",
+          "severity": "review",
+          "message": "Some claims are not corroborated across the available documents.",
+          "evidence_ids": [
+            "e1",
+            "e2",
+            "e3",
+            "e4",
+            "e5",
+            "e6",
+            "e7",
+            "e8",
+            "e9",
+            "e10",
+            "e11",
+            "e13"
+          ]
+        }
+      ],
+      "state": "pending_review",
+      "citation_fidelity": 1.0,
+      "review_questions": 2
+    },
+    {
+      "packet_id": "004",
+      "profile_id": "startup",
+      "role_family": "security_reliability",
+      "condition": "ambiguous_scope",
+      "findings": [
+        {
+          "finding_id": "v2-ambiguous_evidence-88",
+          "type": "ambiguous_evidence",
+          "severity": "review",
+          "message": "Some evidence describes scope or ownership ambiguously and needs reviewer clarification.",
+          "evidence_ids": [
+            "e3",
+            "e10"
+          ]
+        },
+        {
+          "finding_id": "v2-uncorroborated_evidence-64",
+          "type": "uncorroborated_evidence",
+          "severity": "review",
+          "message": "Some claims are not corroborated across the available documents.",
+          "evidence_ids": [
+            "e1",
+            "e2",
+            "e3",
+            "e4",
+            "e5",
+            "e6",
+            "e7",
+            "e8",
+            "e9",
+            "e10",
+            "e11",
+            "e13"
+          ]
+        }
+      ],
+      "state": "finalized",
+      "citation_fidelity": 1.0,
+      "review_questions": 2
+    },
+    {
+      "packet_id": "005",
+      "profile_id": "enterprise",
+      "role_family": "backend_platform",
+      "condition": "timeline_inconsistency",
+      "findings": [
+        {
+          "finding_id": "v2-timeline_inconsistency-65",
+          "type": "timeline_inconsistency",
+          "severity": "block",
+          "message": "Multiple overlapping CV timeline claims require recruiter review.",
+          "evidence_ids": [
+            "e1",
+            "e5"
+          ]
+        },
+        {
+          "finding_id": "v2-uncorroborated_evidence-64",
+          "type": "uncorroborated_evidence",
+          "severity": "review",
+          "message": "Some claims are not corroborated across the available documents.",
+          "evidence_ids": [
+            "e1",
+            "e2",
+            "e3",
+            "e4",
+            "e5",
+            "e6",
+            "e7",
+            "e8",
+            "e9",
+            "e10",
+            "e11",
+            "e12",
+            "e13",
+            "e15"
+          ]
+        }
+      ],
+      "state": "pending_review",
+      "citation_fidelity": 1.0,
+      "review_questions": 2
+    },
+    {
+      "packet_id": "006",
+      "profile_id": "small_team",
+      "role_family": "product_engineering",
+      "condition": "stale_assessment",
+      "findings": [
+        {
+          "finding_id": "v2-stale_evidence-71",
+          "type": "stale_evidence",
+          "severity": "block",
+          "message": "Assessment dated 2025-11-20 is older than the 180-day freshness policy.",
+          "evidence_ids": []
+        },
+        {
+          "finding_id": "v2-uncorroborated_evidence-64",
+          "type": "uncorroborated_evidence",
+          "severity": "review",
+          "message": "Some claims are not corroborated across the available documents.",
+          "evidence_ids": [
+            "e1",
+            "e2",
+            "e3",
+            "e4",
+            "e5",
+            "e6",
+            "e7",
+            "e8",
+            "e9",
+            "e10",
+            "e11",
+            "e13"
+          ]
+        }
+      ],
+      "state": "pending_review",
+      "citation_fidelity": 1.0,
+      "review_questions": 2
+    },
+    {
+      "packet_id": "007",
+      "profile_id": "startup",
+      "role_family": "data_ml_infrastructure",
+      "condition": "hard_negative",
+      "findings": [
+        {
+          "finding_id": "v2-uncorroborated_evidence-64",
+          "type": "uncorroborated_evidence",
+          "severity": "review",
+          "message": "Some claims are not corroborated across the available documents.",
+          "evidence_ids": [
+            "e1",
+            "e2",
+            "e3",
+            "e4",
+            "e5",
+            "e6",
+            "e7",
+            "e8",
+            "e9",
+            "e10",
+            "e11",
+            "e13"
+          ]
+        }
+      ],
+      "state": "finalized",
+      "citation_fidelity": 1.0,
+      "review_questions": 2
+    },
+    {
+      "packet_id": "008",
+      "profile_id": "enterprise",
+      "role_family": "security_reliability",
+      "condition": "clean",
+      "findings": [
+        {
+          "finding_id": "v2-uncorroborated_evidence-64",
+          "type": "uncorroborated_evidence",
+          "severity": "review",
+          "message": "Some claims are not corroborated across the available documents.",
+          "evidence_ids": [
+            "e1",
+            "e2",
+            "e3",
+            "e4",
+            "e5",
+            "e6",
+            "e7",
+            "e8",
+            "e9",
+            "e10",
+            "e11",
+            "e13"
+          ]
+        }
+      ],
+      "state": "finalized",
+      "citation_fidelity": 1.0,
+      "review_questions": 2
+    },
+    {
+      "packet_id": "009",
+      "profile_id": "small_team",
+      "role_family": "backend_platform",
+      "condition": "contradiction",
+      "findings": [
+        {
+          "finding_id": "v2-conflicting_evidence-111",
+          "type": "conflicting_evidence",
+          "severity": "block",
+          "message": "Resume ownership language is narrower or inconsistent with the interview account; recruiter review is required.",
+          "evidence_ids": [
+            "e1",
+            "e2",
+            "e3",
+            "e4",
+            "e5",
+            "e6",
+            "e7",
+            "e8",
+            "e9",
+            "e10",
+            "e11",
+            "e12",
+            "e13",
+            "e14"
+          ]
+        },
+        {
+          "finding_id": "v2-uncorroborated_evidence-64",
+          "type": "uncorroborated_evidence",
+          "severity": "review",
+          "message": "Some claims are not corroborated across the available documents.",
+          "evidence_ids": [
+            "e1",
+            "e2",
+            "e4",
+            "e5",
+            "e6",
+            "e7",
+            "e8",
+            "e9",
+            "e10",
+            "e11",
+            "e13"
+          ]
+        }
+      ],
+      "state": "pending_review",
+      "citation_fidelity": 1.0,
+      "review_questions": 2
+    },
+    {
+      "packet_id": "010",
+      "profile_id": "startup",
+      "role_family": "product_engineering",
+      "condition": "clean",
+      "findings": [
+        {
+          "finding_id": "v2-uncorroborated_evidence-64",
+          "type": "uncorroborated_evidence",
+          "severity": "review",
+          "message": "Some claims are not corroborated across the available documents.",
+          "evidence_ids": [
+            "e1",
+            "e2",
+            "e3",
+            "e4",
+            "e5",
+            "e6",
+            "e7",
+            "e8",
+            "e9",
+            "e10",
+            "e11",
+            "e13"
+          ]
+        }
+      ],
+      "state": "finalized",
+      "citation_fidelity": 1.0,
+      "review_questions": 2
+    },
+    {
+      "packet_id": "011",
+      "profile_id": "enterprise",
+      "role_family": "data_ml_infrastructure",
+      "condition": "ambiguous_scope",
+      "findings": [
+        {
+          "finding_id": "v2-ambiguous_evidence-88",
+          "type": "ambiguous_evidence",
+          "severity": "review",
+          "message": "Some evidence describes scope or ownership ambiguously and needs reviewer clarification.",
+          "evidence_ids": [
+            "e3",
+            "e10"
+          ]
+        },
+        {
+          "finding_id": "v2-uncorroborated_evidence-64",
+          "type": "uncorroborated_evidence",
+          "severity": "review",
+          "message": "Some claims are not corroborated across the available documents.",
+          "evidence_ids": [
+            "e1",
+            "e2",
+            "e3",
+            "e4",
+            "e5",
+            "e6",
+            "e7",
+            "e8",
+            "e9",
+            "e10",
+            "e11",
+            "e13"
+          ]
+        }
+      ],
+      "state": "finalized",
+      "citation_fidelity": 1.0,
+      "review_questions": 2
+    },
+    {
+      "packet_id": "012",
+      "profile_id": "small_team",
+      "role_family": "security_reliability",
+      "condition": "clean",
+      "findings": [
+        {
+          "finding_id": "v2-uncorroborated_evidence-64",
+          "type": "uncorroborated_evidence",
+          "severity": "review",
+          "message": "Some claims are not corroborated across the available documents.",
+          "evidence_ids": [
+            "e1",
+            "e2",
+            "e3",
+            "e4",
+            "e5",
+            "e6",
+            "e7",
+            "e8",
+            "e9",
+            "e10",
+            "e11",
+            "e13"
+          ]
+        }
+      ],
+      "state": "finalized",
+      "citation_fidelity": 1.0,
+      "review_questions": 2
+    }
+  ],
+  "summary": {
+    "context_counts": {
+      "enterprise": 4,
+      "small_team": 4,
+      "startup": 4
+    },
+    "expected_findings_surfaced": 5,
+    "expected_findings_total": 5,
+    "finding_recall": 1.0,
+    "blocking_false_positives": 0,
+    "citation_fidelity": 1.0,
+    "reviewer_burden": {
+      "packets_requiring_review": 5,
+      "review_rate": 0.4166666666666667,
+      "blocking_findings": 5,
+      "avg_review_questions_per_packet": 2,
+      "avg_blocking_findings_per_review_packet": 1.0
+    },
+    "per_profile": {
+      "enterprise": {
+        "packets": 4,
+        "expected_findings_surfaced": 1,
+        "expected_findings_total": 1,
+        "finding_recall": 1.0,
+        "review_packets": 1,
+        "review_rate": 0.25,
+        "citation_fidelity": 1.0
+      },
+      "small_team": {
+        "packets": 4,
+        "expected_findings_surfaced": 3,
+        "expected_findings_total": 3,
+        "finding_recall": 1.0,
+        "review_packets": 3,
+        "review_rate": 0.75,
+        "citation_fidelity": 1.0
+      },
+      "startup": {
+        "packets": 4,
+        "expected_findings_surfaced": 1,
+        "expected_findings_total": 1,
+        "finding_recall": 1.0,
+        "review_packets": 1,
+        "review_rate": 0.25,
+        "citation_fidelity": 1.0
+      }
+    }
+  }
+}

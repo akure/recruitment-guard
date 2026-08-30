@@ -37,7 +37,7 @@ def _conflict(bundle: dict[str, Any]) -> dict[str, Any] | None:
     cv_text = " ".join(item["claim"].lower() for item in cv)
     tx_text = " ".join(item["claim"].lower() for item in tx)
     leadership = any(cv_text.startswith(prefix) or f" {prefix}" in cv_text for prefix in ("led ", "owned ", "lead "))
-    reduced_scope = any(phrase in tx_text for phrase in ("contributed implementation", "shared the final ownership", "staff engineer owned", "parts of the rollout"))
+    reduced_scope = any(phrase in tx_text for phrase in ("contributed implementation", "staff engineer owned"))
     if leadership and reduced_scope:
         ids = [item["evidence_id"] for item in cv + tx if item["evidence_id"]]
         return _finding("conflicting_evidence", "block", "Resume ownership language is narrower or inconsistent with the interview account; recruiter review is required.", ids)
@@ -58,6 +58,9 @@ def validate_v2(bundle: dict[str, Any], assessment: dict[str, Any] | None, as_of
     conflict = _conflict(bundle)
     if conflict:
         findings.append(conflict)
+    cv_timelines = [item for item in bundle["evidence"] if item["source"]["source_doc"] == "cv" and item["evidence_kind"] == "timeline"]
+    if len(cv_timelines) >= 2:
+        findings.append(_finding("timeline_inconsistency", "block", "Multiple overlapping CV timeline claims require recruiter review.", [item["evidence_id"] for item in cv_timelines]))
     findings.extend(_assessment_findings(assessment, as_of))
     ambiguous = [item for item in bundle["evidence"] if item["evidence_quality"] == "ambiguous"]
     if ambiguous:
