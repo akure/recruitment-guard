@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+.env
+.env.*
+!.env.example
+extraction/output/
+briefs/*.md
+trajectories/*.json
+pending_review/*.json
+.pytest_cache/

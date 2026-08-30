@@ -5,6 +5,7 @@ This changelog records each sprint and meaningful behavior change as it happens.
 | Stage | What you tried and why | Evidence | Decision / Learning |
 |---|---|---|---|
 | Sprint 0 — Scope lock | Added the approved problem brief for a guarded candidate-evidence workflow. Fixed the role, synthetic 12-packet evaluation design, baseline-vs-guarded comparison, and no-hire/no-score constraint before implementation. | Not yet measured; implementation and evaluation have not started. | Approved foundation. Preserve the fixed scope and do not add ranking, real candidate data, ATS integrations, or automated consequential decisions. |
+| Sprint 1 — Dataset + baseline + extraction foundation | Created the project structure; generated and froze 12 synthetic packets with exact planted cases in packets 01–03 and nine clean controls; added the baseline runner; added strict extracted-fact schema validation, verbatim source-span checks, and a batch extraction runner with local mock mode. | Dataset verification: `12` packets, `11` assessments, `3` planted cases. Extraction smoke test: `12` artifacts and all source-span checks passed. No outcome metric yet; `eval/metrics.md` is not implemented. | Keep the frozen dataset and the small two-stage foundation. Next sprint should implement the deterministic validator and its unit tests before full pipeline wiring. |
 
 ## Changelog discipline
 

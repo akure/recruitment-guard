@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CandidatePacketManifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["packet_id", "role", "assessment_present", "planted_case"],
+  "properties": {
+    "packet_id": {"type": "string", "pattern": "^[0-9]{2}$"},
+    "role": {"const": "Backend Engineer"},
+    "assessment_present": {"type": "boolean"},
+    "planted_case": {"type": ["string", "null"], "enum": [null, "team_size_ownership_contradiction", "skill_depth_contradiction", "missing_assessment"]}
+  }
+}

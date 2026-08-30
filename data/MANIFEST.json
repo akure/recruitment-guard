@@ -1,0 +1,14 @@
+{
+  "dataset_version": "sprint-1",
+  "role": "Backend Engineer",
+  "synthetic_only": true,
+  "packet_count": 12,
+  "planted_cases": {
+    "01": "team_size_ownership_contradiction",
+    "02": "skill_depth_contradiction",
+    "03": "missing_assessment"
+  },
+  "clean_controls": ["04", "05", "06", "07", "08", "09", "10", "11", "12"],
+  "assessment_present": ["01", "02", "04", "05", "06", "07", "08", "09", "10", "11", "12"],
+  "assessment_absent": ["03"]
+}
