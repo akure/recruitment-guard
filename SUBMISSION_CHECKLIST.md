@@ -7,8 +7,11 @@
 | Solution code and running changelog | Repository source plus `CHANGELOG.md` | Present |
 | Reproduction guide | `REPRODUCE.md` | Present |
 | Solution video script | `video/SCRIPT.md` | Present |
-| Representative agent trajectories | `trajectories/` | Present: packet 03 paused, packet 04 finalized |
+| Representative agent trajectories | `trajectories/` | Present: packet 03 paused, packet 04 finalized, plus annotated baseline/guarded/v2.1/live traces |
+| Agent instructions | `docs/AGENT-INSTRUCTIONS.md` | Present: prompts, schemas, deterministic gates, and model configuration |
 | Measured evaluation | `eval/metrics.md`, `eval/results.json` | Present |
+| Clean-checkout verifier | `scripts/verify_clean_checkout.sh` | Passed against pushed `main` |
+| CI pipeline | `.github/workflows/ci.yml` | Passed for pushed submission commit |
 
 ## Rubric self-check
 
@@ -18,10 +21,10 @@
 | Agent Solution & Engineering | 30 | Structured extraction, deterministic validation, and a human checkpoint each map to a specific failure mode; memory, orchestration, and external actions are deliberately omitted. | Strong |
 | End-to-End Quality | 20 | The brief has source-bound claims, flagged findings, gap handling, resolution notes, and an unconditional no-recommendation disclaimer. | Adequate-to-strong; the local mock path is intentionally minimal rather than UI-polished. |
 | Measured Improvement | 15 | The same 12 packets feed both paths; the committed harness measured baseline `0/3`, guarded `3/3`, and `0/9` guarded false positives. | Strong for the deterministic mock evaluation; live-model quality remains unmeasured. |
-| Reproducibility | 15 | `REPRODUCE.md` gives separate baseline, guarded, evaluation, and test commands and the repository contains synthetic data. | Strong for a credential-free clean checkout: the pushed repository was cloned fresh and baseline, guarded, evaluation, and tests all passed. An independent second-person run remains a useful additional check. |
+| Reproducibility | 15 | `REPRODUCE.md` gives separate baseline, v2.1 solution, evaluation, and test commands; `scripts/verify_clean_checkout.sh` executes them from a fresh clone. | Strong for a credential-free clean checkout: the verifier passed at the pushed submission commit and CI passed. An independent second-person run remains a useful additional check. |
 | Hot Take / Insights | 5 | The changelog records the observed disclaimer-scoring failure and the extraction/heuristic fixes that followed. | Strong |
 
-**Weakest criterion:** Reproducibility is the weakest remaining area only because an independent clean-checkout run has not been performed by a second person. The guide is credential-free and the local mock path is designed to make that verification straightforward.
+**Weakest criterion:** Reproducibility remains the weakest area only because an independent human run has not been documented and live-model quality is unmeasured. The automated clean-checkout verifier, deterministic mock path, and CI make the remaining check straightforward.
 
 ## Ground-rules compliance
 
