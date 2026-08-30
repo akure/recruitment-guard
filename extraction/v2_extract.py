@@ -148,6 +148,15 @@ def validate_bundle(bundle: dict[str, Any], packet: Path) -> dict[str, Any]:
 
 def extract_packet(packet: Path, mock: bool = False) -> dict[str, Any]:
     profile, role, truth = _load_context(packet)
+    policies = profile.get("evidence_policies", {})
+    review_questions = policies.get("review_questions")
+    if review_questions is None:
+        # Operational packets predate profile policy metadata. Preserve the
+        # evidence-only boundary without inventing a suitability score.
+        review_questions = [
+            "What source span supports the profile's stated evidence expectation?",
+            "Which work-practice details should the reviewer confirm with the candidate?",
+        ]
     bundle = {
         "schema_version": SCHEMA_VERSION,
         "packet_id": truth["packet_id"],
@@ -155,7 +164,7 @@ def extract_packet(packet: Path, mock: bool = False) -> dict[str, Any]:
         "role_family": truth["role_family"],
         "requirements": _requirements(packet, profile, role),
         "evidence": _candidate_evidence(packet, truth["role_family"]),
-        "review_questions": profile["evidence_policies"]["review_questions"],
+        "review_questions": review_questions,
     }
     return validate_bundle(bundle, packet)
 
