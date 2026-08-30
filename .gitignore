@@ -5,6 +5,5 @@ __pycache__/
 !.env.example
 extraction/output/
 briefs/*.md
-trajectories/*.json
 pending_review/*.json
 .pytest_cache/

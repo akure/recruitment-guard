@@ -51,9 +51,11 @@ The current repository contains the following foundation:
 | `extraction/run.py` | Batch extraction runner for all 12 packets |
 | `schemas/` | Machine-readable extracted-fact and packet-manifest schemas |
 | `checkpoint/` | File-based pause, recruiter resolution, finalization gate, and evidence-bound brief renderer |
+| `guarded/runner.py` | End-to-end guarded execution and reviewed-packet resumption |
+| `trajectories/` | Per-packet stage logs and representative judge-readable examples |
 | `CHANGELOG.md` | Sprint-by-sprint and meaningful-change record |
 
-The current checkpoint workflow can be exercised with `python3 -m checkpoint.pause`, `python3 -m checkpoint.resolve`, and `python3 -m checkpoint.finalize`. Finalization is blocked until every blocking finding has a recruiter-entered resolution. The next implementation milestone is an end-to-end guarded runner with trajectory logging.
+The current checkpoint workflow can be exercised with `python3 -m checkpoint.pause`, `python3 -m checkpoint.resolve`, and `python3 -m checkpoint.finalize`. The end-to-end runner can be smoke-tested with `python3 -m guarded.runner 04 --mock`; flagged packets enter pending review and are resumed only after a recruiter resolution. Representative trajectories for packet 03 and packet 04 are retained under `trajectories/`. The next implementation milestone is the baseline-vs-guarded evaluation harness.
 
 ## Current documents
 

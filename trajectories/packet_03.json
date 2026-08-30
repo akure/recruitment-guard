@@ -1,0 +1,80 @@
+{
+  "packet_id": "03",
+  "state": "pending_review",
+  "stage_1_extraction": {
+    "cv": {
+      "source_doc": "cv",
+      "packet_id": "03",
+      "facts": [
+        {
+          "fact_id": "c1",
+          "subject": "team_size_service",
+          "claim": "team of 4 engineers",
+          "source_span": "team of 4 engineers",
+          "span_offset": [
+            157,
+            176
+          ]
+        }
+      ]
+    },
+    "transcript": {
+      "source_doc": "transcript",
+      "packet_id": "03",
+      "facts": [
+        {
+          "fact_id": "t1",
+          "subject": "team_size_service",
+          "claim": "team of 4 engineers",
+          "source_span": "team of 4 engineers",
+          "span_offset": [
+            136,
+            155
+          ]
+        },
+        {
+          "fact_id": "t2",
+          "subject": "tenure_backend_engineering",
+          "claim": "5 years of backend experience",
+          "source_span": "5 years of backend experience",
+          "span_offset": [
+            218,
+            247
+          ]
+        }
+      ]
+    }
+  },
+  "stage_2_validation": [
+    {
+      "finding_id": "c1",
+      "type": "missing_evidence",
+      "subject": "assessment",
+      "sources": [],
+      "severity": "block",
+      "resolution": null
+    }
+  ],
+  "stage_3_pause": {
+    "paused": true,
+    "pending_review": "pending_review/packet_03.json",
+    "resolved_by": null,
+    "resolution_notes": []
+  },
+  "stage_4_final_brief": null,
+  "model_calls": [
+    {
+      "stage": "extraction",
+      "doc": "cv",
+      "tokens_in": 0,
+      "tokens_out": 0
+    },
+    {
+      "stage": "extraction",
+      "doc": "transcript",
+      "tokens_in": 0,
+      "tokens_out": 0
+    }
+  ],
+  "elapsed_seconds": 0.001277
+}
