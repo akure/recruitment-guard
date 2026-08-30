@@ -1,0 +1,194 @@
+{
+  "records": [
+    {
+      "packet_id": "01",
+      "baseline_surface": false,
+      "guarded_findings": [
+        {
+          "finding_id": "c1",
+          "type": "contradiction",
+          "subject": "ownership_payments_migration",
+          "sources": [
+            {
+              "doc": "cv",
+              "fact_id": "c2",
+              "span": "owning architecture and delivery"
+            },
+            {
+              "doc": "transcript",
+              "fact_id": "t1",
+              "span": "drove the whole thing solo"
+            }
+          ],
+          "severity": "block",
+          "resolution": null
+        }
+      ],
+      "baseline_time_seconds": 3.5380071494728327e-06,
+      "guarded_time_seconds": 0.0015114089765120298,
+      "baseline_tokens": 0,
+      "guarded_tokens": 0,
+      "baseline_state": "finalized",
+      "guarded_state": "pending_review"
+    },
+    {
+      "packet_id": "02",
+      "baseline_surface": false,
+      "guarded_findings": [
+        {
+          "finding_id": "c1",
+          "type": "contradiction",
+          "subject": "skill_claim_distributed_systems",
+          "sources": [
+            {
+              "doc": "cv",
+              "fact_id": "c2",
+              "span": "Expert in distributed systems"
+            },
+            {
+              "doc": "transcript",
+              "fact_id": "t2",
+              "span": "I didn't really need to think about it much beyond that."
+            }
+          ],
+          "severity": "block",
+          "resolution": null
+        }
+      ],
+      "baseline_time_seconds": 3.116001607850194e-06,
+      "guarded_time_seconds": 0.0012739860103465617,
+      "baseline_tokens": 0,
+      "guarded_tokens": 0,
+      "baseline_state": "finalized",
+      "guarded_state": "pending_review"
+    },
+    {
+      "packet_id": "03",
+      "baseline_surface": false,
+      "guarded_findings": [
+        {
+          "finding_id": "c1",
+          "type": "missing_evidence",
+          "subject": "assessment",
+          "sources": [],
+          "severity": "block",
+          "resolution": null
+        }
+      ],
+      "baseline_time_seconds": 2.3049942683428526e-06,
+      "guarded_time_seconds": 0.0009652939916122705,
+      "baseline_tokens": 0,
+      "guarded_tokens": 0,
+      "baseline_state": "finalized",
+      "guarded_state": "pending_review"
+    },
+    {
+      "packet_id": "04",
+      "baseline_surface": false,
+      "guarded_findings": [],
+      "baseline_time_seconds": 2.321990905329585e-06,
+      "guarded_time_seconds": 0.0009128940000664443,
+      "baseline_tokens": 0,
+      "guarded_tokens": 0,
+      "baseline_state": "finalized",
+      "guarded_state": "finalized"
+    },
+    {
+      "packet_id": "05",
+      "baseline_surface": false,
+      "guarded_findings": [],
+      "baseline_time_seconds": 2.2599997464567423e-06,
+      "guarded_time_seconds": 0.0008780699863564223,
+      "baseline_tokens": 0,
+      "guarded_tokens": 0,
+      "baseline_state": "finalized",
+      "guarded_state": "finalized"
+    },
+    {
+      "packet_id": "06",
+      "baseline_surface": false,
+      "guarded_findings": [],
+      "baseline_time_seconds": 2.3719912860542536e-06,
+      "guarded_time_seconds": 0.0009045420156326145,
+      "baseline_tokens": 0,
+      "guarded_tokens": 0,
+      "baseline_state": "finalized",
+      "guarded_state": "finalized"
+    },
+    {
+      "packet_id": "07",
+      "baseline_surface": false,
+      "guarded_findings": [],
+      "baseline_time_seconds": 2.282002242282033e-06,
+      "guarded_time_seconds": 0.0009025030012708157,
+      "baseline_tokens": 0,
+      "guarded_tokens": 0,
+      "baseline_state": "finalized",
+      "guarded_state": "finalized"
+    },
+    {
+      "packet_id": "08",
+      "baseline_surface": false,
+      "guarded_findings": [],
+      "baseline_time_seconds": 2.329004928469658e-06,
+      "guarded_time_seconds": 0.0010037529864348471,
+      "baseline_tokens": 0,
+      "guarded_tokens": 0,
+      "baseline_state": "finalized",
+      "guarded_state": "finalized"
+    },
+    {
+      "packet_id": "09",
+      "baseline_surface": false,
+      "guarded_findings": [],
+      "baseline_time_seconds": 2.334010787308216e-06,
+      "guarded_time_seconds": 0.0009018880082294345,
+      "baseline_tokens": 0,
+      "guarded_tokens": 0,
+      "baseline_state": "finalized",
+      "guarded_state": "finalized"
+    },
+    {
+      "packet_id": "10",
+      "baseline_surface": false,
+      "guarded_findings": [],
+      "baseline_time_seconds": 2.3460015654563904e-06,
+      "guarded_time_seconds": 0.0008712190028745681,
+      "baseline_tokens": 0,
+      "guarded_tokens": 0,
+      "baseline_state": "finalized",
+      "guarded_state": "finalized"
+    },
+    {
+      "packet_id": "11",
+      "baseline_surface": false,
+      "guarded_findings": [],
+      "baseline_time_seconds": 2.340995706617832e-06,
+      "guarded_time_seconds": 0.000870574003783986,
+      "baseline_tokens": 0,
+      "guarded_tokens": 0,
+      "baseline_state": "finalized",
+      "guarded_state": "finalized"
+    },
+    {
+      "packet_id": "12",
+      "baseline_surface": false,
+      "guarded_findings": [],
+      "baseline_time_seconds": 2.384971594437957e-06,
+      "guarded_time_seconds": 0.0008657839789520949,
+      "baseline_tokens": 0,
+      "guarded_tokens": 0,
+      "baseline_state": "finalized",
+      "guarded_state": "finalized"
+    }
+  ],
+  "summary": {
+    "baseline_planted_surfaced": 0,
+    "guarded_planted_surfaced": 3,
+    "guarded_false_positives": 0,
+    "baseline_avg_time_seconds": 2.494164315673212e-06,
+    "guarded_avg_time_seconds": 0.0009884929968393408,
+    "baseline_avg_tokens": 0,
+    "guarded_avg_tokens": 0
+  }
+}

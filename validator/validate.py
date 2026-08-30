@@ -60,7 +60,8 @@ def _default_conflict(a: str, b: str) -> bool:
     right_solo = any(token in right for token in (" solo ", " mostly me ", " worked alone "))
     team_left = re.search(r"team of\s+(\d+)", left)
     team_right = re.search(r"team of\s+(\d+)", right)
-    if left_solo != right_solo and (team_left or team_right):
+    leadership_claim = any(token in left or token in right for token in (" led ", " owning ", " drove ", " owned "))
+    if left_solo != right_solo and (team_left or team_right or leadership_claim):
         return True
     expert_left = " expert " in left
     expert_right = " expert " in right

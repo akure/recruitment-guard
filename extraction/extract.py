@@ -64,11 +64,14 @@ def _mock_extract(source: str, source_doc: str, packet_id: str) -> dict[str, Any
     if "payments migration" in source.lower():
         add("ownership_payments_migration", "owning architecture and delivery")
         add("ownership_payments_migration", "drove the whole thing solo")
-    if "distributed systems" in source.lower():
+        if source_doc == "transcript":
+            add("team_size_payments_migration", "mostly me. I had code review from one senior engineer but I drove the whole thing solo.")
+    if "distributed systems" in source.lower() or "consistency guarantees" in source.lower():
         if source_doc == "cv":
             add("skill_claim_distributed_systems", "Expert in distributed systems")
         else:
             add("skill_demonstrated_distributed_systems", "we just made sure the database was replicated")
+            add("skill_claim_distributed_systems", "I didn't really need to think about it much beyond that.")
     if "backend experience" in source.lower():
         match = re.search(r"(\d+ years of backend experience)", source, re.I)
         if match:
