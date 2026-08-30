@@ -1,0 +1,8 @@
+{
+  "packet_id": "020",
+  "profile_id": "small_team",
+  "role_family": "security_reliability",
+  "condition": "stale_assessment",
+  "synthetic_only": true,
+  "expected_blocking": true
+}

@@ -110,8 +110,11 @@ data/packet_NN
 - [V2 cross-context metrics](eval/v2_metrics.md)
 - [V2.0 release notes](docs/V2-RELEASE-NOTES.md)
 - [PMF analysis and next sprint](docs/PMF-AND-NEXT-SPRINT.md)
+- [Evidence Operations Layer](docs/EVIDENCE-OPERATIONS.md)
 - [V2 evaluation records](eval/v2_results.json)
 - [Changelog](CHANGELOG.md)
+
+The Evidence Operations Layer is now available under `ops/` with canonical workflow events, explicit consent validation, vendor-neutral folder ingestion, and human-owned review items. Its additive benchmark is under `data_ops/` and can be regenerated with `python3 scripts/generate_ops_benchmark.py`; see [Evidence Operations documentation](docs/EVIDENCE-OPERATIONS.md).
 
 V2 Milestone 1 is now available under `data_v2/`. Generate the deterministic realistic-but-fictional benchmark with `python3 scripts/generate_data_v2.py`. It produces 12 packets across startup, enterprise, and small-team profiles and four role families, with clean, contradiction, missing/stale evidence, ambiguous-scope, timeline, and hard-negative conditions. V1 remains frozen and byte-identical to the `v1.0.0` release; see the [V2 scope and compatibility contract](docs/V2-SCOPE-AND-COMPATIBILITY.md).
 

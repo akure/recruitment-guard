@@ -1,0 +1,8 @@
+{
+  "packet_id": "019",
+  "profile_id": "small_team",
+  "role_family": "data_ml_infrastructure",
+  "condition": "missing_consent",
+  "synthetic_only": true,
+  "expected_blocking": true
+}

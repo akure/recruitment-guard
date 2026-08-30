@@ -1,0 +1,6 @@
+{
+  "role_family": "data_ml_infrastructure",
+  "title": "Data / ML Infrastructure Engineer",
+  "core_stack": "Python, SQL, orchestration, data quality, and model-serving operations",
+  "synthetic_only": true
+}

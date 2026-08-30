@@ -1,0 +1,8 @@
+{
+  "packet_id": "015",
+  "profile_id": "enterprise",
+  "role_family": "backend_platform",
+  "condition": "sponsorship_routing",
+  "synthetic_only": true,
+  "expected_blocking": false
+}

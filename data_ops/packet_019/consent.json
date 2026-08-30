@@ -1,0 +1,18 @@
+{
+  "consent_id": "consent-019",
+  "packet_id": "019",
+  "subject_type": "candidate",
+  "purpose": "recruiting_review",
+  "scope": [
+    "resume",
+    "transcript",
+    "assessment",
+    "work_preferences",
+    "authorization_workflow"
+  ],
+  "status": "withdrawn",
+  "recorded_at": "2026-08-30T10:00:00Z",
+  "withdrawn_at": "2026-08-30T10:00:00Z",
+  "retention_days": 180,
+  "source": "approved_demo_fixture"
+}

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RecruitmentGuardConsentRecord",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["consent_id", "packet_id", "subject_type", "purpose", "scope", "status", "recorded_at", "retention_days", "source"],
+  "properties": {
+    "consent_id": {"type": "string"},
+    "packet_id": {"type": "string"},
+    "subject_type": {"const": "candidate"},
+    "purpose": {"enum": ["recruiting_review", "assessment_review", "workflow_analytics"]},
+    "scope": {"type": "array", "items": {"enum": ["resume", "transcript", "assessment", "work_preferences", "authorization_workflow"]}, "minItems": 1},
+    "status": {"enum": ["granted", "withdrawn", "expired"]},
+    "recorded_at": {"type": "string", "format": "date-time"},
+    "withdrawn_at": {"type": ["string", "null"], "format": "date-time"},
+    "retention_days": {"type": "integer", "minimum": 1, "maximum": 3650},
+    "source": {"enum": ["candidate_form", "recruiter_import", "approved_demo_fixture"]}
+  }
+}

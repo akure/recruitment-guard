@@ -1,0 +1,8 @@
+{
+  "packet_id": "016",
+  "profile_id": "enterprise",
+  "role_family": "product_engineering",
+  "condition": "hard_negative",
+  "synthetic_only": true,
+  "expected_blocking": false
+}

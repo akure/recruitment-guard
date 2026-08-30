@@ -1,0 +1,8 @@
+{
+  "packet_id": "014",
+  "profile_id": "enterprise",
+  "role_family": "security_reliability",
+  "condition": "work_mode_mismatch",
+  "synthetic_only": true,
+  "expected_blocking": true
+}

@@ -1,0 +1,8 @@
+{
+  "packet_id": "013",
+  "profile_id": "enterprise",
+  "role_family": "data_ml_infrastructure",
+  "condition": "unsupported_claim",
+  "synthetic_only": true,
+  "expected_blocking": false
+}

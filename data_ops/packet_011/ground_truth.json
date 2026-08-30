@@ -1,0 +1,8 @@
+{
+  "packet_id": "011",
+  "profile_id": "enterprise",
+  "role_family": "backend_platform",
+  "condition": "missing_consent",
+  "synthetic_only": true,
+  "expected_blocking": true
+}

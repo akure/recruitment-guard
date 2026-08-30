@@ -1,0 +1,8 @@
+{
+  "packet_id": "008",
+  "profile_id": "startup",
+  "role_family": "security_reliability",
+  "condition": "hard_negative",
+  "synthetic_only": true,
+  "expected_blocking": false
+}

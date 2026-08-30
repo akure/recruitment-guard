@@ -1,0 +1,8 @@
+{
+  "packet_id": "002",
+  "profile_id": "startup",
+  "role_family": "product_engineering",
+  "condition": "contradiction",
+  "synthetic_only": true,
+  "expected_blocking": true
+}

@@ -1,0 +1,7 @@
+{
+  "profile_id": "enterprise",
+  "context": "A regulated company with multiple engineering groups, established interfaces, and change-management controls.",
+  "mode": "Hybrid with two office days per week in the candidate's assigned hub and documented on-call rotation.",
+  "evidence": "sustained depth, operational reliability, cross-functional delivery, and work within controlled change processes",
+  "synthetic_only": true
+}

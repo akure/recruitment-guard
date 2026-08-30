@@ -1,0 +1,413 @@
+{
+  "schema_version": "ops.v1",
+  "benchmark_id": "evidence-operations-24",
+  "packet_count": 24,
+  "profiles": [
+    "startup",
+    "enterprise",
+    "small_team"
+  ],
+  "role_families": [
+    "backend_platform",
+    "product_engineering",
+    "data_ml_infrastructure",
+    "security_reliability"
+  ],
+  "conditions": [
+    "clean",
+    "contradiction",
+    "missing_consent",
+    "stale_assessment",
+    "unsupported_claim",
+    "work_mode_mismatch",
+    "sponsorship_routing",
+    "hard_negative"
+  ],
+  "synthetic_only": true,
+  "packets": [
+    {
+      "packet_id": "001",
+      "profile_id": "startup",
+      "role_family": "backend_platform",
+      "condition": "clean",
+      "synthetic_only": true,
+      "source_files": [
+        "assessment.json",
+        "consent.json",
+        "cv.md",
+        "ground_truth.json",
+        "jd.md",
+        "profile.json",
+        "transcript.md"
+      ]
+    },
+    {
+      "packet_id": "002",
+      "profile_id": "startup",
+      "role_family": "product_engineering",
+      "condition": "contradiction",
+      "synthetic_only": true,
+      "source_files": [
+        "assessment.json",
+        "consent.json",
+        "cv.md",
+        "ground_truth.json",
+        "jd.md",
+        "profile.json",
+        "transcript.md"
+      ]
+    },
+    {
+      "packet_id": "003",
+      "profile_id": "startup",
+      "role_family": "data_ml_infrastructure",
+      "condition": "missing_consent",
+      "synthetic_only": true,
+      "source_files": [
+        "assessment.json",
+        "consent.json",
+        "cv.md",
+        "ground_truth.json",
+        "jd.md",
+        "profile.json",
+        "transcript.md"
+      ]
+    },
+    {
+      "packet_id": "004",
+      "profile_id": "startup",
+      "role_family": "security_reliability",
+      "condition": "stale_assessment",
+      "synthetic_only": true,
+      "source_files": [
+        "assessment.json",
+        "consent.json",
+        "cv.md",
+        "ground_truth.json",
+        "jd.md",
+        "profile.json",
+        "transcript.md"
+      ]
+    },
+    {
+      "packet_id": "005",
+      "profile_id": "startup",
+      "role_family": "backend_platform",
+      "condition": "unsupported_claim",
+      "synthetic_only": true,
+      "source_files": [
+        "assessment.json",
+        "consent.json",
+        "cv.md",
+        "ground_truth.json",
+        "jd.md",
+        "profile.json",
+        "transcript.md"
+      ]
+    },
+    {
+      "packet_id": "006",
+      "profile_id": "startup",
+      "role_family": "product_engineering",
+      "condition": "work_mode_mismatch",
+      "synthetic_only": true,
+      "source_files": [
+        "assessment.json",
+        "consent.json",
+        "cv.md",
+        "ground_truth.json",
+        "jd.md",
+        "profile.json",
+        "transcript.md"
+      ]
+    },
+    {
+      "packet_id": "007",
+      "profile_id": "startup",
+      "role_family": "data_ml_infrastructure",
+      "condition": "sponsorship_routing",
+      "synthetic_only": true,
+      "source_files": [
+        "assessment.json",
+        "consent.json",
+        "cv.md",
+        "ground_truth.json",
+        "jd.md",
+        "profile.json",
+        "transcript.md"
+      ]
+    },
+    {
+      "packet_id": "008",
+      "profile_id": "startup",
+      "role_family": "security_reliability",
+      "condition": "hard_negative",
+      "synthetic_only": true,
+      "source_files": [
+        "assessment.json",
+        "consent.json",
+        "cv.md",
+        "ground_truth.json",
+        "jd.md",
+        "profile.json",
+        "transcript.md"
+      ]
+    },
+    {
+      "packet_id": "009",
+      "profile_id": "enterprise",
+      "role_family": "data_ml_infrastructure",
+      "condition": "clean",
+      "synthetic_only": true,
+      "source_files": [
+        "assessment.json",
+        "consent.json",
+        "cv.md",
+        "ground_truth.json",
+        "jd.md",
+        "profile.json",
+        "transcript.md"
+      ]
+    },
+    {
+      "packet_id": "010",
+      "profile_id": "enterprise",
+      "role_family": "security_reliability",
+      "condition": "contradiction",
+      "synthetic_only": true,
+      "source_files": [
+        "assessment.json",
+        "consent.json",
+        "cv.md",
+        "ground_truth.json",
+        "jd.md",
+        "profile.json",
+        "transcript.md"
+      ]
+    },
+    {
+      "packet_id": "011",
+      "profile_id": "enterprise",
+      "role_family": "backend_platform",
+      "condition": "missing_consent",
+      "synthetic_only": true,
+      "source_files": [
+        "assessment.json",
+        "consent.json",
+        "cv.md",
+        "ground_truth.json",
+        "jd.md",
+        "profile.json",
+        "transcript.md"
+      ]
+    },
+    {
+      "packet_id": "012",
+      "profile_id": "enterprise",
+      "role_family": "product_engineering",
+      "condition": "stale_assessment",
+      "synthetic_only": true,
+      "source_files": [
+        "assessment.json",
+        "consent.json",
+        "cv.md",
+        "ground_truth.json",
+        "jd.md",
+        "profile.json",
+        "transcript.md"
+      ]
+    },
+    {
+      "packet_id": "013",
+      "profile_id": "enterprise",
+      "role_family": "data_ml_infrastructure",
+      "condition": "unsupported_claim",
+      "synthetic_only": true,
+      "source_files": [
+        "assessment.json",
+        "consent.json",
+        "cv.md",
+        "ground_truth.json",
+        "jd.md",
+        "profile.json",
+        "transcript.md"
+      ]
+    },
+    {
+      "packet_id": "014",
+      "profile_id": "enterprise",
+      "role_family": "security_reliability",
+      "condition": "work_mode_mismatch",
+      "synthetic_only": true,
+      "source_files": [
+        "assessment.json",
+        "consent.json",
+        "cv.md",
+        "ground_truth.json",
+        "jd.md",
+        "profile.json",
+        "transcript.md"
+      ]
+    },
+    {
+      "packet_id": "015",
+      "profile_id": "enterprise",
+      "role_family": "backend_platform",
+      "condition": "sponsorship_routing",
+      "synthetic_only": true,
+      "source_files": [
+        "assessment.json",
+        "consent.json",
+        "cv.md",
+        "ground_truth.json",
+        "jd.md",
+        "profile.json",
+        "transcript.md"
+      ]
+    },
+    {
+      "packet_id": "016",
+      "profile_id": "enterprise",
+      "role_family": "product_engineering",
+      "condition": "hard_negative",
+      "synthetic_only": true,
+      "source_files": [
+        "assessment.json",
+        "consent.json",
+        "cv.md",
+        "ground_truth.json",
+        "jd.md",
+        "profile.json",
+        "transcript.md"
+      ]
+    },
+    {
+      "packet_id": "017",
+      "profile_id": "small_team",
+      "role_family": "backend_platform",
+      "condition": "clean",
+      "synthetic_only": true,
+      "source_files": [
+        "assessment.json",
+        "consent.json",
+        "cv.md",
+        "ground_truth.json",
+        "jd.md",
+        "profile.json",
+        "transcript.md"
+      ]
+    },
+    {
+      "packet_id": "018",
+      "profile_id": "small_team",
+      "role_family": "product_engineering",
+      "condition": "contradiction",
+      "synthetic_only": true,
+      "source_files": [
+        "assessment.json",
+        "consent.json",
+        "cv.md",
+        "ground_truth.json",
+        "jd.md",
+        "profile.json",
+        "transcript.md"
+      ]
+    },
+    {
+      "packet_id": "019",
+      "profile_id": "small_team",
+      "role_family": "data_ml_infrastructure",
+      "condition": "missing_consent",
+      "synthetic_only": true,
+      "source_files": [
+        "assessment.json",
+        "consent.json",
+        "cv.md",
+        "ground_truth.json",
+        "jd.md",
+        "profile.json",
+        "transcript.md"
+      ]
+    },
+    {
+      "packet_id": "020",
+      "profile_id": "small_team",
+      "role_family": "security_reliability",
+      "condition": "stale_assessment",
+      "synthetic_only": true,
+      "source_files": [
+        "assessment.json",
+        "consent.json",
+        "cv.md",
+        "ground_truth.json",
+        "jd.md",
+        "profile.json",
+        "transcript.md"
+      ]
+    },
+    {
+      "packet_id": "021",
+      "profile_id": "small_team",
+      "role_family": "backend_platform",
+      "condition": "unsupported_claim",
+      "synthetic_only": true,
+      "source_files": [
+        "assessment.json",
+        "consent.json",
+        "cv.md",
+        "ground_truth.json",
+        "jd.md",
+        "profile.json",
+        "transcript.md"
+      ]
+    },
+    {
+      "packet_id": "022",
+      "profile_id": "small_team",
+      "role_family": "product_engineering",
+      "condition": "work_mode_mismatch",
+      "synthetic_only": true,
+      "source_files": [
+        "assessment.json",
+        "consent.json",
+        "cv.md",
+        "ground_truth.json",
+        "jd.md",
+        "profile.json",
+        "transcript.md"
+      ]
+    },
+    {
+      "packet_id": "023",
+      "profile_id": "small_team",
+      "role_family": "data_ml_infrastructure",
+      "condition": "sponsorship_routing",
+      "synthetic_only": true,
+      "source_files": [
+        "assessment.json",
+        "consent.json",
+        "cv.md",
+        "ground_truth.json",
+        "jd.md",
+        "profile.json",
+        "transcript.md"
+      ]
+    },
+    {
+      "packet_id": "024",
+      "profile_id": "small_team",
+      "role_family": "security_reliability",
+      "condition": "hard_negative",
+      "synthetic_only": true,
+      "source_files": [
+        "assessment.json",
+        "consent.json",
+        "cv.md",
+        "ground_truth.json",
+        "jd.md",
+        "profile.json",
+        "transcript.md"
+      ]
+    }
+  ]
+}

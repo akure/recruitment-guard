@@ -1,0 +1,8 @@
+{
+  "packet_id": "024",
+  "profile_id": "small_team",
+  "role_family": "security_reliability",
+  "condition": "hard_negative",
+  "synthetic_only": true,
+  "expected_blocking": false
+}

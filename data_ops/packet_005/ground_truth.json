@@ -1,0 +1,8 @@
+{
+  "packet_id": "005",
+  "profile_id": "startup",
+  "role_family": "backend_platform",
+  "condition": "unsupported_claim",
+  "synthetic_only": true,
+  "expected_blocking": false
+}
