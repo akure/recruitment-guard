@@ -109,6 +109,7 @@ data/packet_NN
 - [V2 scope and compatibility contract](docs/V2-SCOPE-AND-COMPATIBILITY.md)
 - [V2 cross-context metrics](eval/v2_metrics.md)
 - [V2.0 release notes](docs/V2-RELEASE-NOTES.md)
+- [PMF analysis and next sprint](docs/PMF-AND-NEXT-SPRINT.md)
 - [V2 evaluation records](eval/v2_results.json)
 - [Changelog](CHANGELOG.md)
 
