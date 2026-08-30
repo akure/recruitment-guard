@@ -50,9 +50,10 @@ The current repository contains the following foundation:
 | `extraction/extract.py` | Strict structured extraction, taxonomy checks, and source-span validation |
 | `extraction/run.py` | Batch extraction runner for all 12 packets |
 | `schemas/` | Machine-readable extracted-fact and packet-manifest schemas |
+| `checkpoint/` | File-based pause, recruiter resolution, finalization gate, and evidence-bound brief renderer |
 | `CHANGELOG.md` | Sprint-by-sprint and meaningful-change record |
 
-The next implementation milestone is the deterministic validator. Its unit tests must be written before it is wired into the guarded pipeline.
+The current checkpoint workflow can be exercised with `python3 -m checkpoint.pause`, `python3 -m checkpoint.resolve`, and `python3 -m checkpoint.finalize`. Finalization is blocked until every blocking finding has a recruiter-entered resolution. The next implementation milestone is an end-to-end guarded runner with trajectory logging.
 
 ## Current documents
 
