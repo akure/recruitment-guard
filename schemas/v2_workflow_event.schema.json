@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RecruitmentGuardV2WorkflowEvent",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["event_id", "packet_id", "event_type", "actor_type", "occurred_at", "payload"],
+  "properties": {
+    "event_id": {"type": "string", "minLength": 1},
+    "packet_id": {"type": "string", "minLength": 1},
+    "event_type": {"enum": ["packet_ingested", "extraction_completed", "validation_completed", "review_requested", "finding_resolved", "brief_exported", "consent_recorded", "consent_withdrawn"]},
+    "actor_type": {"enum": ["system", "recruiter", "hiring_manager", "candidate"]},
+    "occurred_at": {"type": "string", "format": "date-time"},
+    "payload": {"type": "object"}
+  }
+}

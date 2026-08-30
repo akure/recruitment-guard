@@ -132,4 +132,13 @@ python3 -m workflow.run data_ops/packet_001 \\
   --owner recruiter
 ```
 
-A CSV or JSON manifest must include `packet_path`, `packet_dir`, or `path` for each row. The output contains `run.json` plus one directory per packet. The workflow treats withdrawn or inactive consent as blocking and never emits a hiring score, ranking, recommendation, or ATS write-back action.
+A CSV or JSON manifest must include `packet_path`, `packet_dir`, or `path` for each row. The output contains `run.json` plus one directory per packet. Use `--due-at` to assign a review deadline, then resolve a blocking packet with an attributable note:
+
+```bash
+python3 -m workflow.run --output-root workflow_output \\
+  --resolve-packet 004 \\
+  --actor recruiter \\
+  --resolution-note "Recruiter confirmed the assessment was refreshed."
+```
+
+The workflow treats withdrawn or inactive consent as blocking and refuses reviewer override; it never emits a hiring score, ranking, recommendation, or ATS write-back action.

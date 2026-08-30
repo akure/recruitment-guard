@@ -15,13 +15,14 @@ from extraction.v2_extract import extract_packet
 from ops.review import create_review_item
 from validator.v2_validate import validate_v2
 from workflow.importer import import_source
+from workflow.review import resolve_packet
 
 
 def _now() -> str:
     return datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
 
 
-def process_packet(record: dict[str, Any], as_of: date, owner: str) -> dict[str, Any]:
+def process_packet(record: dict[str, Any], as_of: date, owner: str, due_at: str | None = None) -> dict[str, Any]:
     packet = Path(record["packet_path"]).resolve() if record.get("packet_path") else None
     if packet is None or not packet.is_dir():
         raise ValueError("workflow records require an internal packet_path")
@@ -39,7 +40,7 @@ def process_packet(record: dict[str, Any], as_of: date, owner: str) -> dict[str,
         })
         validation["blocking"] = True
     review_items = [
-        create_review_item(bundle["packet_id"], finding["type"], finding.get("evidence_ids", []), owner)
+        create_review_item(bundle["packet_id"], finding["type"], finding.get("evidence_ids", []), owner, due_at=due_at)
         for finding in validation["findings"]
         if finding["severity"] == "block"
     ]
@@ -78,9 +79,9 @@ def process_packet(record: dict[str, Any], as_of: date, owner: str) -> dict[str,
     }
 
 
-def run(source: Path, output_root: Path, as_of: date, owner: str) -> dict[str, Any]:
+def run(source: Path, output_root: Path, as_of: date, owner: str, due_at: str | None = None) -> dict[str, Any]:
     records = import_source(source)
-    results = [process_packet(record, as_of, owner) for record in records]
+    results = [process_packet(record, as_of, owner, due_at) for record in records]
     output_root.mkdir(parents=True, exist_ok=True)
     for result in results:
         packet_dir = output_root / f"packet_{result['packet_id']}"
@@ -101,12 +102,23 @@ def run(source: Path, output_root: Path, as_of: date, owner: str) -> dict[str, A
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Import, validate, review, and export RecruitmentGuard evidence packets.")
-    parser.add_argument("source", type=Path, help="packet folder, folder of packet_* directories, CSV, or JSON manifest")
+    parser.add_argument("source", type=Path, nargs="?", help="packet folder, folder of packet_* directories, CSV, or JSON manifest")
     parser.add_argument("--output-root", type=Path, default=Path("workflow_output"))
     parser.add_argument("--as-of", default=date.today().isoformat())
     parser.add_argument("--owner", default="recruiter", help="owner assigned to blocking review items")
+    parser.add_argument("--due-at", help="ISO-8601 due date/time for blocking review items")
+    parser.add_argument("--resolve-packet", help="resolve all open non-consent findings for a prior packet run")
+    parser.add_argument("--actor", default="recruiter", help="reviewer actor for resolution")
+    parser.add_argument("--resolution-note", help="resolution note for the reviewer action")
     args = parser.parse_args()
-    print(json.dumps(run(args.source, args.output_root, date.fromisoformat(args.as_of), args.owner), indent=2))
+    if args.resolve_packet:
+        if not args.resolution_note:
+            parser.error("--resolution-note is required with --resolve-packet")
+        print(json.dumps(resolve_packet(args.output_root, args.resolve_packet, args.actor, args.resolution_note), indent=2))
+    else:
+        if not args.source:
+            parser.error("source is required unless --resolve-packet is used")
+        print(json.dumps(run(args.source, args.output_root, date.fromisoformat(args.as_of), args.owner, args.due_at), indent=2))
 
 
 if __name__ == "__main__":

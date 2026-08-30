@@ -5,7 +5,7 @@ from typing import Any
 from uuid import uuid4
 
 
-def create_review_item(packet_id: str, issue_type: str, evidence_ids: list[str], owner: str) -> dict[str, Any]:
+def create_review_item(packet_id: str, issue_type: str, evidence_ids: list[str], owner: str, due_at: str | None = None) -> dict[str, Any]:
     if not owner.strip():
         raise ValueError("review item requires an owner")
     if not issue_type.strip():
@@ -17,6 +17,7 @@ def create_review_item(packet_id: str, issue_type: str, evidence_ids: list[str],
         "evidence_ids": list(evidence_ids),
         "owner": owner,
         "status": "open",
+        "due_at": due_at,
         "created_at": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
         "resolution": None,
     }

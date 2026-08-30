@@ -9,6 +9,12 @@
     "display_name": {"type": "string"},
     "version": {"type": "string", "pattern": "^v2\\.[0-9]+$"},
     "context": {"type": "string"},
+    "work_mode": {"type": "string", "enum": ["remote", "hybrid", "onsite", "flexible"]},
+    "timezone_overlap": {"type": "string"},
+    "travel_expectations": {"type": "string"},
+    "sponsorship_workflow": {"type": "string"},
+    "core_skills": {"type": "array", "items": {"type": "string"}},
+    "work_practice_expectations": {"type": "array", "items": {"type": "string"}},
     "evidence_policies": {
       "type": "object",
       "additionalProperties": false,

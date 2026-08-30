@@ -7,6 +7,7 @@ from pathlib import Path
 
 from workflow.importer import import_source
 from workflow.run import run
+from workflow.review import resolve_packet
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -58,6 +59,25 @@ class WorkflowRunTests(unittest.TestCase):
             self.assertEqual(item["owner"], "recruiter")
             self.assertEqual(item["status"], "open")
             self.assertFalse((output / "packet_003" / "brief.md").exists())
+
+    def test_resolution_finalizes_non_consent_blocking_packet(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            output = Path(tmp) / "out"
+            run(PACKETS / "packet_004", output, date(2026, 8, 30), "recruiter", due_at="2026-09-02T17:00:00Z")
+            audit = json.loads((output / "packet_004" / "audit.json").read_text())
+            self.assertEqual(audit["review_items"][0]["due_at"], "2026-09-02T17:00:00Z")
+            result = resolve_packet(output, "004", "recruiter", "Recruiter confirmed the assessment was refreshed.")
+            self.assertEqual(result["state"], "finalized")
+            self.assertTrue((output / "packet_004" / "brief.md").exists())
+            updated = json.loads((output / "packet_004" / "audit.json").read_text())
+            self.assertTrue(any(event["event_type"] == "finding_resolved" for event in updated["events"]))
+
+    def test_withdrawn_consent_cannot_be_overridden(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            output = Path(tmp) / "out"
+            run(PACKETS / "packet_003", output, date(2026, 8, 30), "recruiter")
+            with self.assertRaises(ValueError):
+                resolve_packet(output, "003", "recruiter", "Override consent status.")
 
 
 if __name__ == "__main__":
