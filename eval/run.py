@@ -38,11 +38,18 @@ def run_evaluation(data_root: Path, output_root: Path, mock: bool = True) -> tup
             transcript = (packet_path / "transcript.md").read_text(encoding="utf-8")
 
             start = time.perf_counter()
-            baseline_text = mock_brief(packet_id, cv, transcript) if mock else llm_brief(packet_id, cv, transcript)
+            baseline_error = None
+            try:
+                baseline_text = mock_brief(packet_id, cv, transcript) if mock else llm_brief(packet_id, cv, transcript)
+            except Exception as exc:
+                baseline_text = ""
+                baseline_error = f"{type(exc).__name__}: {exc}"
             baseline_seconds = time.perf_counter() - start
 
             start = time.perf_counter()
-            guarded_result = run_packet(
+            guarded_error = None
+            try:
+                guarded_result = run_packet(
                 packet_id,
                 data_root=data_root,
                 extraction_root=temp_root / "extraction",
@@ -51,9 +58,13 @@ def run_evaluation(data_root: Path, output_root: Path, mock: bool = True) -> tup
                 trajectory_root=temp_root / "trajectories",
                 mock=mock,
                 as_of=date(2026, 8, 30),
-            )
+                )
+            except Exception as exc:
+                guarded_result = {"state": "error"}
+                guarded_error = f"{type(exc).__name__}: {exc}"
             guarded_seconds = time.perf_counter() - start
-            trajectory = json.loads((temp_root / "trajectories" / f"packet_{packet_id}.json").read_text(encoding="utf-8"))
+            trajectory_path = temp_root / "trajectories" / f"packet_{packet_id}.json"
+            trajectory = json.loads(trajectory_path.read_text(encoding="utf-8")) if trajectory_path.exists() else {}
             findings = trajectory.get("stage_2_validation", [])
             records.append({
                 "packet_id": packet_id,
@@ -63,10 +74,15 @@ def run_evaluation(data_root: Path, output_root: Path, mock: bool = True) -> tup
                 "guarded_time_seconds": guarded_seconds,
                 "baseline_tokens": 0,
                 "guarded_tokens": sum(call.get("tokens_in", 0) + call.get("tokens_out", 0) for call in trajectory.get("model_calls", [])),
-                "baseline_state": "finalized",
+                "baseline_state": "finalized" if baseline_error is None else "error",
                 "guarded_state": guarded_result["state"],
+                "baseline_error": baseline_error,
+                "guarded_error": guarded_error,
+                "complete": baseline_error is None and guarded_error is None,
             })
     summary = evaluate_records(records)
+    summary["complete_packets"] = sum(record["complete"] for record in records)
+    summary["failed_packets"] = len(records) - summary["complete_packets"]
     (output_root / "results.json").write_text(json.dumps({"records": records, "summary": summary}, indent=2) + "\n", encoding="utf-8")
     (output_root / "metrics.md").write_text(render_metrics(summary), encoding="utf-8")
     return records, summary

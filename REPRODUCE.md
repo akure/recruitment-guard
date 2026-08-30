@@ -15,6 +15,32 @@ python3 -m pip install -r requirements.txt
 
 The V1 dataset is already included under `data/`. It is synthetic, fictional, and frozen at dataset version `sprint-1`. V2.0 adds the additive `data_v2/` benchmark with 12 realistic-but-fictional packets across startup, enterprise, and small-team profiles. No private or real candidate data is required.
 
+## Primary v2.1 PMF demo
+
+This is the shortest complete product path: ingest a folder packet, create a cited brief for a clean case, pause a stale-assessment case in a review queue, then resolve and resume it. It requires no credentials.
+
+```bash
+python3 -m workflow.run data_ops/packet_001 \\
+  --output-root /tmp/rg-demo-clean \\
+  --as-of 2026-08-30 \\
+  --owner recruiter
+python3 -m workflow.run data_ops/packet_004 \\
+  --output-root /tmp/rg-demo-review \\
+  --as-of 2026-08-30 \\
+  --owner recruiter \\
+  --due-at 2026-09-02T17:00:00Z
+python3 -m workflow.run --output-root /tmp/rg-demo-review \\
+  --resolve-packet 004 \\
+  --actor recruiter \\
+  --resolution-note "Reviewer confirmed the evidence context."
+```
+
+Expected result: packet `001` writes `brief.md` and `audit.json`; packet `004` first remains `pending_review`, then writes `brief.md` only after the attributable resolution. A withdrawn-consent packet cannot be overridden. The complete clean-checkout verifier is:
+
+```bash
+bash scripts/verify_clean_checkout.sh
+```
+
 ## 1. Run the baseline path
 
 The baseline is a single-prompt summarizer with no extraction, deterministic validation, or checkpoint. The local mock command is credential-free:
@@ -124,7 +150,17 @@ The current deterministic mock run should reproduce this qualitative result:
 
 The mock run reports zero model tokens because no external model call is made. Runtime is measured on the host and may vary slightly; the committed `eval/metrics.md` contains the run used for the submission checkpoint.
 
-## 6. Run the tests
+## 6. Run the live same-case evaluation
+
+The live evaluator uses the exact same 12 V1 packets for the baseline and guarded paths. Configure `OPENAI_API_KEY`, `OPENAI_API_BASE`, and optionally `RECRUITMENT_GUARD_MODEL` (default `gpt-5-mini`) and `RECRUITMENT_GUARD_TIMEOUT` (default `45` seconds), then run:
+
+```bash
+RECRUITMENT_GUARD_MODEL=gpt-5-mini python3 eval/run.py --live --output-root eval/live
+```
+
+The live run records per-packet errors, runtime, and token usage only when the provider completes. It must not be compared to the deterministic mock metrics unless all 12 packets complete successfully. The deterministic validator remains the safety gate, and a timeout or malformed citation fails closed rather than producing an unverified brief.
+
+## 7. Run the tests
 
 ```bash
 python3 -m unittest discover -s tests -v

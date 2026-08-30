@@ -36,10 +36,16 @@ def _validate(data: dict[str, Any], source: str, source_doc: str, packet_id: str
         span = fact["source_span"]
         if span not in source:
             raise ValueError(f"fact {index} source_span is not a verbatim substring")
-        start = source.find(span)
-        end = start + len(span)
-        if fact["span_offset"] != [start, end]:
-            raise ValueError(f"fact {index} has incorrect span_offset: expected {[start, end]}")
+        starts = [match.start() for match in re.finditer(re.escape(span), source)]
+        if not starts:
+            raise ValueError(f"fact {index} source_span is not a verbatim substring")
+        if len(starts) > 1:
+            raise ValueError(f"fact {index} source_span is ambiguous ({len(starts)} matches)")
+        expected = [starts[0], starts[0] + len(span)]
+        if fact["span_offset"] != expected:
+            # Models occasionally quote the right text but count offsets poorly.
+            # Repair is safe only for one exact, unique substring; ambiguity fails closed.
+            fact["span_offset"] = expected
     return data
 
 
@@ -102,7 +108,7 @@ def _llm_extract(source: str, source_doc: str, packet_id: str) -> tuple[dict[str
         },
         "required": ["source_doc", "packet_id", "facts"],
     }
-    client = OpenAI()
+    client = OpenAI(timeout=float(os.getenv("RECRUITMENT_GUARD_TIMEOUT", "45")), max_retries=1)
     response = client.chat.completions.create(
         model=os.getenv("RECRUITMENT_GUARD_MODEL", "gpt-5-mini"),
         messages=[

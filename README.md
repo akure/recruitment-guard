@@ -142,3 +142,9 @@ python3 -m workflow.run --output-root workflow_output \\
 ```
 
 The workflow treats withdrawn or inactive consent as blocking and refuses reviewer override; it never emits a hiring score, ranking, recommendation, or ATS write-back action.
+
+## Reliability insight
+
+> **In consequential workflows, the best agent output is often a precisely cited reason to pause—not a confident recommendation.**
+
+This became concrete during live evaluation: the model returned a valid quoted span with an incorrect character offset. The system rejected the unverified citation, then added a deterministic repair only for exact unique matches and continued to fail closed on ambiguity. The lesson is to score output semantics, preserve provenance, and make uncertainty operational before narrative synthesis.

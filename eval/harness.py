@@ -31,6 +31,8 @@ def evaluate_records(records: Iterable[dict]) -> dict:
         "guarded_avg_time_seconds": mean(record.get("guarded_time_seconds", 0) for record in records),
         "baseline_avg_tokens": mean(record.get("baseline_tokens", 0) for record in records),
         "guarded_avg_tokens": mean(record.get("guarded_tokens", 0) for record in records),
+        "complete_packets": sum(record.get("complete", True) for record in records),
+        "failed_packets": sum(not record.get("complete", True) for record in records),
     }
 
 
@@ -63,5 +65,6 @@ def render_metrics(summary: dict) -> str:
         f"| Avg. token cost per packet       | {_number(baseline_tokens)} | {_number(guarded_tokens)} | {_delta(baseline_tokens, guarded_tokens)} |",
         "",
         "The baseline is the existing single-prompt summarizer. The guarded path is the existing extraction → deterministic validation → checkpoint pipeline. Mock mode uses zero model tokens and is intended for deterministic local verification; live-mode token usage is recorded when the API-backed paths are run.",
+        f"Complete packets: {summary.get('complete_packets', 'not recorded')}; failed packets: {summary.get('failed_packets', 'not recorded')}. Do not interpret quality metrics from an incomplete live run.",
         "",
     ])

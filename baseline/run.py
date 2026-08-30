@@ -32,7 +32,7 @@ This baseline is a plain summarization comparison path. It does not perform stru
 def llm_brief(packet_id: str, cv: str, transcript: str) -> str:
     from openai import OpenAI
 
-    client = OpenAI()
+    client = OpenAI(timeout=float(os.getenv("RECRUITMENT_GUARD_TIMEOUT", "45")), max_retries=1)
     response = client.chat.completions.create(
         model=os.getenv("RECRUITMENT_GUARD_MODEL", "gpt-5-mini"),
         messages=[
