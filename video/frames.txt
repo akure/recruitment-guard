@@ -1,0 +1,17 @@
+file '/home/ubuntu/recruitment-guard/video/frames/01_title.png'
+duration 20
+file '/home/ubuntu/recruitment-guard/video/frames/02_problem.png'
+duration 30
+file '/home/ubuntu/recruitment-guard/video/frames/03_baseline.png'
+duration 25
+file '/home/ubuntu/recruitment-guard/video/frames/04_guarded.png'
+duration 30
+file '/home/ubuntu/recruitment-guard/video/frames/05_workflow.png'
+duration 34
+file '/home/ubuntu/recruitment-guard/video/frames/06_checkpoint.png'
+duration 30
+file '/home/ubuntu/recruitment-guard/video/frames/07_metrics.png'
+duration 28
+file '/home/ubuntu/recruitment-guard/video/frames/08_hot_take.png'
+duration 20
+file '/home/ubuntu/recruitment-guard/video/frames/08_hot_take.png'

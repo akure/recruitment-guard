@@ -114,6 +114,8 @@ data/packet_NN
 - [Trajectory artifacts](trajectories/README.md)
 - [Annotated agent trajectories](trajectories/AGENT-TRAJECTORIES.md)
 - [Agent instructions and design contract](docs/AGENT-INSTRUCTIONS.md)
+- [Solution video](video/recruitment-guard-submission.mp4)
+- [Solution video build notes](video/README.md)
 - [Solution video outline](video/SCRIPT.md)
 - [Submission checklist and self-score](SUBMISSION_CHECKLIST.md)
 

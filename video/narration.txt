@@ -1,0 +1,21 @@
+Recruitment Guard is an evidence operations layer for recruiters who need to turn a résumé, interview transcript, and assessment into a hiring-manager handoff without losing the truth between documents.
+
+Meet Priya. She is closing a Backend Engineer role after six weeks. Her bottleneck is not writing a summary. It is noticing when the résumé says one thing, the interview says another, or an assessment is missing or stale. A fluent narrative can hide those problems.
+
+Our baseline is intentionally simple. One prompt receives the CV and transcript and writes a coherent summary. It does not extract comparable facts, check freshness, or pause for review. On the identical twelve-packet benchmark, that baseline surfaced zero of three planted issues.
+
+Now watch the guarded path. Recruitment Guard extracts facts into a fixed taxonomy: team size, ownership, skill claims, demonstrated skills, and tenure. Each fact keeps an exact source span. Deterministic validation compares only matching subjects and checks missing or stale assessment evidence. The model proposes evidence. Code decides whether the evidence is verifiable.
+
+The product demo is the v2.1 operator workflow. Start with a clean packet. The importer normalizes a folder, validates consent, and produces a cited brief plus an audit record. The brief is evidence-only. It contains sources, requirement coverage, and questions. It never contains a score, ranking, recommendation, or ATS write-back.
+
+Next, run a stale-assessment packet. The workflow does not quietly summarize it. It creates a review item with an owner and due date, and withholds the brief. The recruiter resolves the item with an attributable note. Only then can the workflow resume and export the final brief. If consent was withdrawn, even a reviewer cannot override the stop.
+
+This is the key design choice: the checkpoint is not a warning in the interface. It is a state transition in code. Finalization is unreachable until the human resolution exists.
+
+The numbers show why the guardrail matters. On the same twelve packets, the baseline surfaced zero of three planted cases. The guarded path surfaced all three and produced zero false positives across nine clean controls. In the profile-aware benchmark, finding recall was five of five, blocking false positives were zero, and citation fidelity was one hundred percent. These are evidence-surfacing metrics, not hiring-outcome claims.
+
+The changelog records what changed and why. First, we corrected an evaluation bug: the baseline’s safety disclaimer was being mistaken for a finding. Next, we removed broad ownership heuristics that could turn ambiguous shared work into a false block. Finally, live evaluation exposed a model that quoted the right text but supplied the wrong character offset. The system stopped safely. It now repairs offsets only for an exact unique match, and still fails closed when a citation is ambiguous.
+
+The result is deliberately modest and useful. It does not decide who to hire. It makes evidence traceable, uncertainty visible, and human review operational.
+
+Our hot take is simple: in consequential workflows, the best agent output is often a precisely cited reason to pause, not a confident recommendation. Reliability means preventing a review question from silently becoming a hiring decision.
