@@ -110,3 +110,5 @@ data/packet_NN
 - [Changelog](CHANGELOG.md)
 
 V2 Milestone 1 is now available under `data_v2/`. Generate the deterministic realistic-but-fictional benchmark with `python3 scripts/generate_data_v2.py`. It produces 12 packets across startup, enterprise, and small-team profiles and four role families, with clean, contradiction, missing/stale evidence, ambiguous-scope, timeline, and hard-negative conditions. V1 remains frozen and byte-identical to the `v1.0.0` release; see the [V2 scope and compatibility contract](docs/V2-SCOPE-AND-COMPATIBILITY.md).
+
+V2 Milestone 2 adds profile-aware extraction with `python3 -m extraction.run_v2`. It writes additive `v2.1` evidence bundles containing JD requirements, typed candidate evidence, exact source spans, evidence quality, confidence, corroboration hints, and profile-specific reviewer questions. Run `python3 -m unittest discover -s tests -v` to execute the V1 and V2 regression suites.

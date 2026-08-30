@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RecruitmentGuardV2EvidenceBundle",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "packet_id", "profile_id", "role_family", "requirements", "evidence", "review_questions"],
+  "properties": {
+    "schema_version": {"const": "v2.1"},
+    "packet_id": {"type": "string", "pattern": "^[0-9]{3}$"},
+    "profile_id": {"enum": ["startup", "enterprise", "small_team"]},
+    "role_family": {"type": "string"},
+    "requirements": {"type": "array", "items": {"$ref": "#/$defs/requirement"}},
+    "evidence": {"type": "array", "items": {"$ref": "#/$defs/evidence"}},
+    "review_questions": {"type": "array", "items": {"type": "string"}}
+  },
+  "$defs": {
+    "span": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source_doc", "source_span", "span_offset"],
+      "properties": {
+        "source_doc": {"enum": ["jd", "cv", "transcript", "assessment"]},
+        "source_span": {"type": "string", "minLength": 1},
+        "span_offset": {"type": "array", "items": {"type": "integer", "minimum": 0}, "minItems": 2, "maxItems": 2}
+      }
+    },
+    "requirement": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["requirement_id", "text", "priority", "source"],
+      "properties": {
+        "requirement_id": {"type": "string"},
+        "text": {"type": "string"},
+        "priority": {"enum": ["must_have", "preferred"]},
+        "source": {"$ref": "#/$defs/span"}
+      }
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["evidence_id", "subject", "claim", "evidence_kind", "evidence_quality", "confidence", "source", "corroboration"],
+      "properties": {
+        "evidence_id": {"type": "string"},
+        "subject": {"type": "string"},
+        "claim": {"type": "string"},
+        "evidence_kind": {"enum": ["accomplishment", "scope", "technology", "timeline", "working_style", "interview_answer", "uncertainty"]},
+        "evidence_quality": {"enum": ["direct", "specific", "ambiguous", "uncorroborated", "uncertain"]},
+        "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+        "source": {"$ref": "#/$defs/span"},
+        "corroboration": {"type": "array", "items": {"type": "string"}}
+      }
+    }
+  }
+}
