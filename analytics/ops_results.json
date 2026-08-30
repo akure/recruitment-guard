@@ -1,0 +1,1663 @@
+{
+  "records": [
+    {
+      "packet_id": "001",
+      "profile_id": "startup",
+      "role_family": "backend_platform",
+      "condition": "clean",
+      "consent_status": "granted",
+      "synthetic_only": true,
+      "ground_truth_expected_blocking": false,
+      "events": [
+        {
+          "event_id": "evt-f91233d4395a",
+          "packet_id": "001",
+          "event_type": "packet_ingested",
+          "actor_type": "system",
+          "occurred_at": "2026-08-30T09:01:00Z",
+          "payload": {
+            "source": "folder"
+          }
+        },
+        {
+          "event_id": "evt-762277cf7aa4",
+          "packet_id": "001",
+          "event_type": "consent_recorded",
+          "actor_type": "system",
+          "occurred_at": "2026-08-30T09:02:00Z",
+          "payload": {
+            "purpose": "recruiting_review",
+            "scope_count": 5
+          }
+        },
+        {
+          "event_id": "evt-687c3ad65171",
+          "packet_id": "001",
+          "event_type": "brief_exported",
+          "actor_type": "recruiter",
+          "occurred_at": "2026-08-30T09:19:00Z",
+          "payload": {
+            "rework_count": 0,
+            "evidence_only": true
+          }
+        }
+      ]
+    },
+    {
+      "packet_id": "002",
+      "profile_id": "startup",
+      "role_family": "product_engineering",
+      "condition": "contradiction",
+      "consent_status": "granted",
+      "synthetic_only": true,
+      "ground_truth_expected_blocking": true,
+      "events": [
+        {
+          "event_id": "evt-3a3ddc9fabb0",
+          "packet_id": "002",
+          "event_type": "packet_ingested",
+          "actor_type": "system",
+          "occurred_at": "2026-08-30T09:02:00Z",
+          "payload": {
+            "source": "folder"
+          }
+        },
+        {
+          "event_id": "evt-06dec3b273b4",
+          "packet_id": "002",
+          "event_type": "consent_recorded",
+          "actor_type": "system",
+          "occurred_at": "2026-08-30T09:03:00Z",
+          "payload": {
+            "purpose": "recruiting_review",
+            "scope_count": 5
+          }
+        },
+        {
+          "event_id": "evt-8f8e751df5ea",
+          "packet_id": "002",
+          "event_type": "review_requested",
+          "actor_type": "system",
+          "occurred_at": "2026-08-30T09:07:00Z",
+          "payload": {
+            "finding_count": 1,
+            "condition": "contradiction"
+          }
+        },
+        {
+          "event_id": "evt-343daf6eec0c",
+          "packet_id": "002",
+          "event_type": "finding_resolved",
+          "actor_type": "recruiter",
+          "occurred_at": "2026-08-30T09:17:00Z",
+          "payload": {
+            "review_id": "review-002",
+            "condition": "contradiction"
+          }
+        },
+        {
+          "event_id": "evt-d1b700f77991",
+          "packet_id": "002",
+          "event_type": "brief_exported",
+          "actor_type": "recruiter",
+          "occurred_at": "2026-08-30T09:20:00Z",
+          "payload": {
+            "rework_count": 0,
+            "evidence_only": true
+          }
+        }
+      ]
+    },
+    {
+      "packet_id": "003",
+      "profile_id": "startup",
+      "role_family": "data_ml_infrastructure",
+      "condition": "missing_consent",
+      "consent_status": "withdrawn",
+      "synthetic_only": true,
+      "ground_truth_expected_blocking": true,
+      "events": [
+        {
+          "event_id": "evt-12944b2c48ba",
+          "packet_id": "003",
+          "event_type": "packet_ingested",
+          "actor_type": "system",
+          "occurred_at": "2026-08-30T09:03:00Z",
+          "payload": {
+            "source": "folder"
+          }
+        },
+        {
+          "event_id": "evt-2a04e4f82f9d",
+          "packet_id": "003",
+          "event_type": "consent_withdrawn",
+          "actor_type": "system",
+          "occurred_at": "2026-08-30T09:04:00Z",
+          "payload": {
+            "purpose": "recruiting_review",
+            "scope_count": 5
+          }
+        },
+        {
+          "event_id": "evt-5a7ada039e6c",
+          "packet_id": "003",
+          "event_type": "review_requested",
+          "actor_type": "system",
+          "occurred_at": "2026-08-30T09:08:00Z",
+          "payload": {
+            "finding_count": 1,
+            "condition": "missing_consent"
+          }
+        },
+        {
+          "event_id": "evt-cb4ba65e2e3c",
+          "packet_id": "003",
+          "event_type": "finding_resolved",
+          "actor_type": "recruiter",
+          "occurred_at": "2026-08-30T09:18:00Z",
+          "payload": {
+            "review_id": "review-003",
+            "condition": "missing_consent"
+          }
+        },
+        {
+          "event_id": "evt-4102f8ba2bc1",
+          "packet_id": "003",
+          "event_type": "brief_exported",
+          "actor_type": "recruiter",
+          "occurred_at": "2026-08-30T09:21:00Z",
+          "payload": {
+            "rework_count": 0,
+            "evidence_only": true
+          }
+        }
+      ]
+    },
+    {
+      "packet_id": "004",
+      "profile_id": "startup",
+      "role_family": "security_reliability",
+      "condition": "stale_assessment",
+      "consent_status": "granted",
+      "synthetic_only": true,
+      "ground_truth_expected_blocking": true,
+      "events": [
+        {
+          "event_id": "evt-68686409cc61",
+          "packet_id": "004",
+          "event_type": "packet_ingested",
+          "actor_type": "system",
+          "occurred_at": "2026-08-30T09:04:00Z",
+          "payload": {
+            "source": "folder"
+          }
+        },
+        {
+          "event_id": "evt-9a64bc6cfd65",
+          "packet_id": "004",
+          "event_type": "consent_recorded",
+          "actor_type": "system",
+          "occurred_at": "2026-08-30T09:05:00Z",
+          "payload": {
+            "purpose": "recruiting_review",
+            "scope_count": 5
+          }
+        },
+        {
+          "event_id": "evt-1372e72ab7e2",
+          "packet_id": "004",
+          "event_type": "review_requested",
+          "actor_type": "system",
+          "occurred_at": "2026-08-30T09:09:00Z",
+          "payload": {
+            "finding_count": 1,
+            "condition": "stale_assessment"
+          }
+        },
+        {
+          "event_id": "evt-829779b9fd92",
+          "packet_id": "004",
+          "event_type": "finding_resolved",
+          "actor_type": "recruiter",
+          "occurred_at": "2026-08-30T09:19:00Z",
+          "payload": {
+            "review_id": "review-004",
+            "condition": "stale_assessment"
+          }
+        },
+        {
+          "event_id": "evt-435af19ca4cc",
+          "packet_id": "004",
+          "event_type": "brief_exported",
+          "actor_type": "recruiter",
+          "occurred_at": "2026-08-30T09:22:00Z",
+          "payload": {
+            "rework_count": 0,
+            "evidence_only": true
+          }
+        }
+      ]
+    },
+    {
+      "packet_id": "005",
+      "profile_id": "startup",
+      "role_family": "backend_platform",
+      "condition": "unsupported_claim",
+      "consent_status": "granted",
+      "synthetic_only": true,
+      "ground_truth_expected_blocking": false,
+      "events": [
+        {
+          "event_id": "evt-0e7c3415e06a",
+          "packet_id": "005",
+          "event_type": "packet_ingested",
+          "actor_type": "system",
+          "occurred_at": "2026-08-30T09:05:00Z",
+          "payload": {
+            "source": "folder"
+          }
+        },
+        {
+          "event_id": "evt-6a556617c552",
+          "packet_id": "005",
+          "event_type": "consent_recorded",
+          "actor_type": "system",
+          "occurred_at": "2026-08-30T09:06:00Z",
+          "payload": {
+            "purpose": "recruiting_review",
+            "scope_count": 5
+          }
+        },
+        {
+          "event_id": "evt-420dfdc5ccf9",
+          "packet_id": "005",
+          "event_type": "review_requested",
+          "actor_type": "system",
+          "occurred_at": "2026-08-30T09:10:00Z",
+          "payload": {
+            "finding_count": 1,
+            "condition": "unsupported_claim"
+          }
+        },
+        {
+          "event_id": "evt-adeab822fd00",
+          "packet_id": "005",
+          "event_type": "finding_resolved",
+          "actor_type": "recruiter",
+          "occurred_at": "2026-08-30T09:20:00Z",
+          "payload": {
+            "review_id": "review-005",
+            "condition": "unsupported_claim"
+          }
+        },
+        {
+          "event_id": "evt-580e01c1ba95",
+          "packet_id": "005",
+          "event_type": "brief_exported",
+          "actor_type": "recruiter",
+          "occurred_at": "2026-08-30T09:23:00Z",
+          "payload": {
+            "rework_count": 1,
+            "evidence_only": true
+          }
+        }
+      ]
+    },
+    {
+      "packet_id": "006",
+      "profile_id": "startup",
+      "role_family": "product_engineering",
+      "condition": "work_mode_mismatch",
+      "consent_status": "granted",
+      "synthetic_only": true,
+      "ground_truth_expected_blocking": true,
+      "events": [
+        {
+          "event_id": "evt-4dad20402e05",
+          "packet_id": "006",
+          "event_type": "packet_ingested",
+          "actor_type": "system",
+          "occurred_at": "2026-08-30T09:06:00Z",
+          "payload": {
+            "source": "folder"
+          }
+        },
+        {
+          "event_id": "evt-9c477971afbe",
+          "packet_id": "006",
+          "event_type": "consent_recorded",
+          "actor_type": "system",
+          "occurred_at": "2026-08-30T09:07:00Z",
+          "payload": {
+            "purpose": "recruiting_review",
+            "scope_count": 5
+          }
+        },
+        {
+          "event_id": "evt-d3cea3837f48",
+          "packet_id": "006",
+          "event_type": "review_requested",
+          "actor_type": "system",
+          "occurred_at": "2026-08-30T09:11:00Z",
+          "payload": {
+            "finding_count": 1,
+            "condition": "work_mode_mismatch"
+          }
+        },
+        {
+          "event_id": "evt-14efb6fa15df",
+          "packet_id": "006",
+          "event_type": "finding_resolved",
+          "actor_type": "recruiter",
+          "occurred_at": "2026-08-30T09:21:00Z",
+          "payload": {
+            "review_id": "review-006",
+            "condition": "work_mode_mismatch"
+          }
+        },
+        {
+          "event_id": "evt-6751c8ad527b",
+          "packet_id": "006",
+          "event_type": "brief_exported",
+          "actor_type": "recruiter",
+          "occurred_at": "2026-08-30T09:24:00Z",
+          "payload": {
+            "rework_count": 1,
+            "evidence_only": true
+          }
+        }
+      ]
+    },
+    {
+      "packet_id": "007",
+      "profile_id": "startup",
+      "role_family": "data_ml_infrastructure",
+      "condition": "sponsorship_routing",
+      "consent_status": "granted",
+      "synthetic_only": true,
+      "ground_truth_expected_blocking": false,
+      "events": [
+        {
+          "event_id": "evt-54624e8c3398",
+          "packet_id": "007",
+          "event_type": "packet_ingested",
+          "actor_type": "system",
+          "occurred_at": "2026-08-30T09:07:00Z",
+          "payload": {
+            "source": "folder"
+          }
+        },
+        {
+          "event_id": "evt-3f5378ccbead",
+          "packet_id": "007",
+          "event_type": "consent_recorded",
+          "actor_type": "system",
+          "occurred_at": "2026-08-30T09:08:00Z",
+          "payload": {
+            "purpose": "recruiting_review",
+            "scope_count": 5
+          }
+        },
+        {
+          "event_id": "evt-6f47e42ed9ab",
+          "packet_id": "007",
+          "event_type": "brief_exported",
+          "actor_type": "recruiter",
+          "occurred_at": "2026-08-30T09:25:00Z",
+          "payload": {
+            "rework_count": 0,
+            "evidence_only": true
+          }
+        }
+      ]
+    },
+    {
+      "packet_id": "008",
+      "profile_id": "startup",
+      "role_family": "security_reliability",
+      "condition": "hard_negative",
+      "consent_status": "granted",
+      "synthetic_only": true,
+      "ground_truth_expected_blocking": false,
+      "events": [
+        {
+          "event_id": "evt-a860b0b453bf",
+          "packet_id": "008",
+          "event_type": "packet_ingested",
+          "actor_type": "system",
+          "occurred_at": "2026-08-30T09:08:00Z",
+          "payload": {
+            "source": "folder"
+          }
+        },
+        {
+          "event_id": "evt-43a0c70e763f",
+          "packet_id": "008",
+          "event_type": "consent_recorded",
+          "actor_type": "system",
+          "occurred_at": "2026-08-30T09:09:00Z",
+          "payload": {
+            "purpose": "recruiting_review",
+            "scope_count": 5
+          }
+        },
+        {
+          "event_id": "evt-b2af9699d463",
+          "packet_id": "008",
+          "event_type": "brief_exported",
+          "actor_type": "recruiter",
+          "occurred_at": "2026-08-30T09:26:00Z",
+          "payload": {
+            "rework_count": 0,
+            "evidence_only": true
+          }
+        }
+      ]
+    },
+    {
+      "packet_id": "009",
+      "profile_id": "enterprise",
+      "role_family": "data_ml_infrastructure",
+      "condition": "clean",
+      "consent_status": "granted",
+      "synthetic_only": true,
+      "ground_truth_expected_blocking": false,
+      "events": [
+        {
+          "event_id": "evt-c99f2476e4f4",
+          "packet_id": "009",
+          "event_type": "packet_ingested",
+          "actor_type": "system",
+          "occurred_at": "2026-08-30T09:09:00Z",
+          "payload": {
+            "source": "folder"
+          }
+        },
+        {
+          "event_id": "evt-628c7488b23c",
+          "packet_id": "009",
+          "event_type": "consent_recorded",
+          "actor_type": "system",
+          "occurred_at": "2026-08-30T09:10:00Z",
+          "payload": {
+            "purpose": "recruiting_review",
+            "scope_count": 5
+          }
+        },
+        {
+          "event_id": "evt-840021fbe615",
+          "packet_id": "009",
+          "event_type": "brief_exported",
+          "actor_type": "recruiter",
+          "occurred_at": "2026-08-30T09:27:00Z",
+          "payload": {
+            "rework_count": 0,
+            "evidence_only": true
+          }
+        }
+      ]
+    },
+    {
+      "packet_id": "010",
+      "profile_id": "enterprise",
+      "role_family": "security_reliability",
+      "condition": "contradiction",
+      "consent_status": "granted",
+      "synthetic_only": true,
+      "ground_truth_expected_blocking": true,
+      "events": [
+        {
+          "event_id": "evt-3632f0f0c069",
+          "packet_id": "010",
+          "event_type": "packet_ingested",
+          "actor_type": "system",
+          "occurred_at": "2026-08-30T09:10:00Z",
+          "payload": {
+            "source": "folder"
+          }
+        },
+        {
+          "event_id": "evt-95acff2758f8",
+          "packet_id": "010",
+          "event_type": "consent_recorded",
+          "actor_type": "system",
+          "occurred_at": "2026-08-30T09:11:00Z",
+          "payload": {
+            "purpose": "recruiting_review",
+            "scope_count": 5
+          }
+        },
+        {
+          "event_id": "evt-7099c9863d0b",
+          "packet_id": "010",
+          "event_type": "review_requested",
+          "actor_type": "system",
+          "occurred_at": "2026-08-30T09:15:00Z",
+          "payload": {
+            "finding_count": 1,
+            "condition": "contradiction"
+          }
+        },
+        {
+          "event_id": "evt-1a09e8024384",
+          "packet_id": "010",
+          "event_type": "finding_resolved",
+          "actor_type": "recruiter",
+          "occurred_at": "2026-08-30T09:25:00Z",
+          "payload": {
+            "review_id": "review-010",
+            "condition": "contradiction"
+          }
+        },
+        {
+          "event_id": "evt-d9183e176e63",
+          "packet_id": "010",
+          "event_type": "brief_exported",
+          "actor_type": "recruiter",
+          "occurred_at": "2026-08-30T09:28:00Z",
+          "payload": {
+            "rework_count": 0,
+            "evidence_only": true
+          }
+        }
+      ]
+    },
+    {
+      "packet_id": "011",
+      "profile_id": "enterprise",
+      "role_family": "backend_platform",
+      "condition": "missing_consent",
+      "consent_status": "withdrawn",
+      "synthetic_only": true,
+      "ground_truth_expected_blocking": true,
+      "events": [
+        {
+          "event_id": "evt-bd34d952bcf2",
+          "packet_id": "011",
+          "event_type": "packet_ingested",
+          "actor_type": "system",
+          "occurred_at": "2026-08-30T09:11:00Z",
+          "payload": {
+            "source": "folder"
+          }
+        },
+        {
+          "event_id": "evt-91614dd4c2f8",
+          "packet_id": "011",
+          "event_type": "consent_withdrawn",
+          "actor_type": "system",
+          "occurred_at": "2026-08-30T09:12:00Z",
+          "payload": {
+            "purpose": "recruiting_review",
+            "scope_count": 5
+          }
+        },
+        {
+          "event_id": "evt-3bc5034bcc53",
+          "packet_id": "011",
+          "event_type": "review_requested",
+          "actor_type": "system",
+          "occurred_at": "2026-08-30T09:16:00Z",
+          "payload": {
+            "finding_count": 1,
+            "condition": "missing_consent"
+          }
+        },
+        {
+          "event_id": "evt-20109455cf1f",
+          "packet_id": "011",
+          "event_type": "finding_resolved",
+          "actor_type": "recruiter",
+          "occurred_at": "2026-08-30T09:26:00Z",
+          "payload": {
+            "review_id": "review-011",
+            "condition": "missing_consent"
+          }
+        },
+        {
+          "event_id": "evt-d7f245af7e4b",
+          "packet_id": "011",
+          "event_type": "brief_exported",
+          "actor_type": "recruiter",
+          "occurred_at": "2026-08-30T09:29:00Z",
+          "payload": {
+            "rework_count": 0,
+            "evidence_only": true
+          }
+        }
+      ]
+    },
+    {
+      "packet_id": "012",
+      "profile_id": "enterprise",
+      "role_family": "product_engineering",
+      "condition": "stale_assessment",
+      "consent_status": "granted",
+      "synthetic_only": true,
+      "ground_truth_expected_blocking": true,
+      "events": [
+        {
+          "event_id": "evt-5eba59b92bb4",
+          "packet_id": "012",
+          "event_type": "packet_ingested",
+          "actor_type": "system",
+          "occurred_at": "2026-08-30T09:12:00Z",
+          "payload": {
+            "source": "folder"
+          }
+        },
+        {
+          "event_id": "evt-2ee8b1451ada",
+          "packet_id": "012",
+          "event_type": "consent_recorded",
+          "actor_type": "system",
+          "occurred_at": "2026-08-30T09:13:00Z",
+          "payload": {
+            "purpose": "recruiting_review",
+            "scope_count": 5
+          }
+        },
+        {
+          "event_id": "evt-2244695998ea",
+          "packet_id": "012",
+          "event_type": "review_requested",
+          "actor_type": "system",
+          "occurred_at": "2026-08-30T09:17:00Z",
+          "payload": {
+            "finding_count": 1,
+            "condition": "stale_assessment"
+          }
+        },
+        {
+          "event_id": "evt-78f3f76875da",
+          "packet_id": "012",
+          "event_type": "finding_resolved",
+          "actor_type": "recruiter",
+          "occurred_at": "2026-08-30T09:27:00Z",
+          "payload": {
+            "review_id": "review-012",
+            "condition": "stale_assessment"
+          }
+        },
+        {
+          "event_id": "evt-f47e53981b3c",
+          "packet_id": "012",
+          "event_type": "brief_exported",
+          "actor_type": "recruiter",
+          "occurred_at": "2026-08-30T09:30:00Z",
+          "payload": {
+            "rework_count": 0,
+            "evidence_only": true
+          }
+        }
+      ]
+    },
+    {
+      "packet_id": "013",
+      "profile_id": "enterprise",
+      "role_family": "data_ml_infrastructure",
+      "condition": "unsupported_claim",
+      "consent_status": "granted",
+      "synthetic_only": true,
+      "ground_truth_expected_blocking": false,
+      "events": [
+        {
+          "event_id": "evt-f526ee4810e7",
+          "packet_id": "013",
+          "event_type": "packet_ingested",
+          "actor_type": "system",
+          "occurred_at": "2026-08-30T09:13:00Z",
+          "payload": {
+            "source": "folder"
+          }
+        },
+        {
+          "event_id": "evt-6cbb0c310560",
+          "packet_id": "013",
+          "event_type": "consent_recorded",
+          "actor_type": "system",
+          "occurred_at": "2026-08-30T09:14:00Z",
+          "payload": {
+            "purpose": "recruiting_review",
+            "scope_count": 5
+          }
+        },
+        {
+          "event_id": "evt-ffe7f694793a",
+          "packet_id": "013",
+          "event_type": "review_requested",
+          "actor_type": "system",
+          "occurred_at": "2026-08-30T09:18:00Z",
+          "payload": {
+            "finding_count": 1,
+            "condition": "unsupported_claim"
+          }
+        },
+        {
+          "event_id": "evt-6cf6645e6bb8",
+          "packet_id": "013",
+          "event_type": "finding_resolved",
+          "actor_type": "recruiter",
+          "occurred_at": "2026-08-30T09:28:00Z",
+          "payload": {
+            "review_id": "review-013",
+            "condition": "unsupported_claim"
+          }
+        },
+        {
+          "event_id": "evt-4f4584e33767",
+          "packet_id": "013",
+          "event_type": "brief_exported",
+          "actor_type": "recruiter",
+          "occurred_at": "2026-08-30T09:31:00Z",
+          "payload": {
+            "rework_count": 1,
+            "evidence_only": true
+          }
+        }
+      ]
+    },
+    {
+      "packet_id": "014",
+      "profile_id": "enterprise",
+      "role_family": "security_reliability",
+      "condition": "work_mode_mismatch",
+      "consent_status": "granted",
+      "synthetic_only": true,
+      "ground_truth_expected_blocking": true,
+      "events": [
+        {
+          "event_id": "evt-0f09306be962",
+          "packet_id": "014",
+          "event_type": "packet_ingested",
+          "actor_type": "system",
+          "occurred_at": "2026-08-30T09:14:00Z",
+          "payload": {
+            "source": "folder"
+          }
+        },
+        {
+          "event_id": "evt-a2b8d5ab70a6",
+          "packet_id": "014",
+          "event_type": "consent_recorded",
+          "actor_type": "system",
+          "occurred_at": "2026-08-30T09:15:00Z",
+          "payload": {
+            "purpose": "recruiting_review",
+            "scope_count": 5
+          }
+        },
+        {
+          "event_id": "evt-76647d196828",
+          "packet_id": "014",
+          "event_type": "review_requested",
+          "actor_type": "system",
+          "occurred_at": "2026-08-30T09:19:00Z",
+          "payload": {
+            "finding_count": 1,
+            "condition": "work_mode_mismatch"
+          }
+        },
+        {
+          "event_id": "evt-b9b16883cf2e",
+          "packet_id": "014",
+          "event_type": "finding_resolved",
+          "actor_type": "recruiter",
+          "occurred_at": "2026-08-30T09:29:00Z",
+          "payload": {
+            "review_id": "review-014",
+            "condition": "work_mode_mismatch"
+          }
+        },
+        {
+          "event_id": "evt-0e1c8235d75c",
+          "packet_id": "014",
+          "event_type": "brief_exported",
+          "actor_type": "recruiter",
+          "occurred_at": "2026-08-30T09:32:00Z",
+          "payload": {
+            "rework_count": 1,
+            "evidence_only": true
+          }
+        }
+      ]
+    },
+    {
+      "packet_id": "015",
+      "profile_id": "enterprise",
+      "role_family": "backend_platform",
+      "condition": "sponsorship_routing",
+      "consent_status": "granted",
+      "synthetic_only": true,
+      "ground_truth_expected_blocking": false,
+      "events": [
+        {
+          "event_id": "evt-0f38d535488b",
+          "packet_id": "015",
+          "event_type": "packet_ingested",
+          "actor_type": "system",
+          "occurred_at": "2026-08-30T09:15:00Z",
+          "payload": {
+            "source": "folder"
+          }
+        },
+        {
+          "event_id": "evt-769786fa6fb4",
+          "packet_id": "015",
+          "event_type": "consent_recorded",
+          "actor_type": "system",
+          "occurred_at": "2026-08-30T09:16:00Z",
+          "payload": {
+            "purpose": "recruiting_review",
+            "scope_count": 5
+          }
+        },
+        {
+          "event_id": "evt-554859f61626",
+          "packet_id": "015",
+          "event_type": "brief_exported",
+          "actor_type": "recruiter",
+          "occurred_at": "2026-08-30T09:33:00Z",
+          "payload": {
+            "rework_count": 0,
+            "evidence_only": true
+          }
+        }
+      ]
+    },
+    {
+      "packet_id": "016",
+      "profile_id": "enterprise",
+      "role_family": "product_engineering",
+      "condition": "hard_negative",
+      "consent_status": "granted",
+      "synthetic_only": true,
+      "ground_truth_expected_blocking": false,
+      "events": [
+        {
+          "event_id": "evt-311839814c85",
+          "packet_id": "016",
+          "event_type": "packet_ingested",
+          "actor_type": "system",
+          "occurred_at": "2026-08-30T09:16:00Z",
+          "payload": {
+            "source": "folder"
+          }
+        },
+        {
+          "event_id": "evt-95495e217fdb",
+          "packet_id": "016",
+          "event_type": "consent_recorded",
+          "actor_type": "system",
+          "occurred_at": "2026-08-30T09:17:00Z",
+          "payload": {
+            "purpose": "recruiting_review",
+            "scope_count": 5
+          }
+        },
+        {
+          "event_id": "evt-ba683b62d196",
+          "packet_id": "016",
+          "event_type": "brief_exported",
+          "actor_type": "recruiter",
+          "occurred_at": "2026-08-30T09:34:00Z",
+          "payload": {
+            "rework_count": 0,
+            "evidence_only": true
+          }
+        }
+      ]
+    },
+    {
+      "packet_id": "017",
+      "profile_id": "small_team",
+      "role_family": "backend_platform",
+      "condition": "clean",
+      "consent_status": "granted",
+      "synthetic_only": true,
+      "ground_truth_expected_blocking": false,
+      "events": [
+        {
+          "event_id": "evt-04b88a97a9e2",
+          "packet_id": "017",
+          "event_type": "packet_ingested",
+          "actor_type": "system",
+          "occurred_at": "2026-08-30T09:17:00Z",
+          "payload": {
+            "source": "folder"
+          }
+        },
+        {
+          "event_id": "evt-9190d69f9b69",
+          "packet_id": "017",
+          "event_type": "consent_recorded",
+          "actor_type": "system",
+          "occurred_at": "2026-08-30T09:18:00Z",
+          "payload": {
+            "purpose": "recruiting_review",
+            "scope_count": 5
+          }
+        },
+        {
+          "event_id": "evt-8cfd676d554f",
+          "packet_id": "017",
+          "event_type": "brief_exported",
+          "actor_type": "recruiter",
+          "occurred_at": "2026-08-30T09:35:00Z",
+          "payload": {
+            "rework_count": 0,
+            "evidence_only": true
+          }
+        }
+      ]
+    },
+    {
+      "packet_id": "018",
+      "profile_id": "small_team",
+      "role_family": "product_engineering",
+      "condition": "contradiction",
+      "consent_status": "granted",
+      "synthetic_only": true,
+      "ground_truth_expected_blocking": true,
+      "events": [
+        {
+          "event_id": "evt-d32be54f4006",
+          "packet_id": "018",
+          "event_type": "packet_ingested",
+          "actor_type": "system",
+          "occurred_at": "2026-08-30T09:18:00Z",
+          "payload": {
+            "source": "folder"
+          }
+        },
+        {
+          "event_id": "evt-d75b25f55fb2",
+          "packet_id": "018",
+          "event_type": "consent_recorded",
+          "actor_type": "system",
+          "occurred_at": "2026-08-30T09:19:00Z",
+          "payload": {
+            "purpose": "recruiting_review",
+            "scope_count": 5
+          }
+        },
+        {
+          "event_id": "evt-3b2afa21eae2",
+          "packet_id": "018",
+          "event_type": "review_requested",
+          "actor_type": "system",
+          "occurred_at": "2026-08-30T09:23:00Z",
+          "payload": {
+            "finding_count": 1,
+            "condition": "contradiction"
+          }
+        },
+        {
+          "event_id": "evt-914822fc85cd",
+          "packet_id": "018",
+          "event_type": "finding_resolved",
+          "actor_type": "recruiter",
+          "occurred_at": "2026-08-30T09:33:00Z",
+          "payload": {
+            "review_id": "review-018",
+            "condition": "contradiction"
+          }
+        },
+        {
+          "event_id": "evt-f310c32d9d7d",
+          "packet_id": "018",
+          "event_type": "brief_exported",
+          "actor_type": "recruiter",
+          "occurred_at": "2026-08-30T09:36:00Z",
+          "payload": {
+            "rework_count": 0,
+            "evidence_only": true
+          }
+        }
+      ]
+    },
+    {
+      "packet_id": "019",
+      "profile_id": "small_team",
+      "role_family": "data_ml_infrastructure",
+      "condition": "missing_consent",
+      "consent_status": "withdrawn",
+      "synthetic_only": true,
+      "ground_truth_expected_blocking": true,
+      "events": [
+        {
+          "event_id": "evt-95427d442a3b",
+          "packet_id": "019",
+          "event_type": "packet_ingested",
+          "actor_type": "system",
+          "occurred_at": "2026-08-30T09:19:00Z",
+          "payload": {
+            "source": "folder"
+          }
+        },
+        {
+          "event_id": "evt-b5c1763698fe",
+          "packet_id": "019",
+          "event_type": "consent_withdrawn",
+          "actor_type": "system",
+          "occurred_at": "2026-08-30T09:20:00Z",
+          "payload": {
+            "purpose": "recruiting_review",
+            "scope_count": 5
+          }
+        },
+        {
+          "event_id": "evt-c959da307c7b",
+          "packet_id": "019",
+          "event_type": "review_requested",
+          "actor_type": "system",
+          "occurred_at": "2026-08-30T09:24:00Z",
+          "payload": {
+            "finding_count": 1,
+            "condition": "missing_consent"
+          }
+        },
+        {
+          "event_id": "evt-9adbd5420106",
+          "packet_id": "019",
+          "event_type": "finding_resolved",
+          "actor_type": "recruiter",
+          "occurred_at": "2026-08-30T09:34:00Z",
+          "payload": {
+            "review_id": "review-019",
+            "condition": "missing_consent"
+          }
+        },
+        {
+          "event_id": "evt-fbd01e9c43b6",
+          "packet_id": "019",
+          "event_type": "brief_exported",
+          "actor_type": "recruiter",
+          "occurred_at": "2026-08-30T09:37:00Z",
+          "payload": {
+            "rework_count": 0,
+            "evidence_only": true
+          }
+        }
+      ]
+    },
+    {
+      "packet_id": "020",
+      "profile_id": "small_team",
+      "role_family": "security_reliability",
+      "condition": "stale_assessment",
+      "consent_status": "granted",
+      "synthetic_only": true,
+      "ground_truth_expected_blocking": true,
+      "events": [
+        {
+          "event_id": "evt-554f70578ff4",
+          "packet_id": "020",
+          "event_type": "packet_ingested",
+          "actor_type": "system",
+          "occurred_at": "2026-08-30T09:20:00Z",
+          "payload": {
+            "source": "folder"
+          }
+        },
+        {
+          "event_id": "evt-11c2c82a4acd",
+          "packet_id": "020",
+          "event_type": "consent_recorded",
+          "actor_type": "system",
+          "occurred_at": "2026-08-30T09:21:00Z",
+          "payload": {
+            "purpose": "recruiting_review",
+            "scope_count": 5
+          }
+        },
+        {
+          "event_id": "evt-6adfa4d1fa23",
+          "packet_id": "020",
+          "event_type": "review_requested",
+          "actor_type": "system",
+          "occurred_at": "2026-08-30T09:25:00Z",
+          "payload": {
+            "finding_count": 1,
+            "condition": "stale_assessment"
+          }
+        },
+        {
+          "event_id": "evt-4fde12b86bbd",
+          "packet_id": "020",
+          "event_type": "finding_resolved",
+          "actor_type": "recruiter",
+          "occurred_at": "2026-08-30T09:35:00Z",
+          "payload": {
+            "review_id": "review-020",
+            "condition": "stale_assessment"
+          }
+        },
+        {
+          "event_id": "evt-f1f2a0a25cf0",
+          "packet_id": "020",
+          "event_type": "brief_exported",
+          "actor_type": "recruiter",
+          "occurred_at": "2026-08-30T09:38:00Z",
+          "payload": {
+            "rework_count": 0,
+            "evidence_only": true
+          }
+        }
+      ]
+    },
+    {
+      "packet_id": "021",
+      "profile_id": "small_team",
+      "role_family": "backend_platform",
+      "condition": "unsupported_claim",
+      "consent_status": "granted",
+      "synthetic_only": true,
+      "ground_truth_expected_blocking": false,
+      "events": [
+        {
+          "event_id": "evt-35a3db826237",
+          "packet_id": "021",
+          "event_type": "packet_ingested",
+          "actor_type": "system",
+          "occurred_at": "2026-08-30T09:21:00Z",
+          "payload": {
+            "source": "folder"
+          }
+        },
+        {
+          "event_id": "evt-eea456df4469",
+          "packet_id": "021",
+          "event_type": "consent_recorded",
+          "actor_type": "system",
+          "occurred_at": "2026-08-30T09:22:00Z",
+          "payload": {
+            "purpose": "recruiting_review",
+            "scope_count": 5
+          }
+        },
+        {
+          "event_id": "evt-1f73ef6d092c",
+          "packet_id": "021",
+          "event_type": "review_requested",
+          "actor_type": "system",
+          "occurred_at": "2026-08-30T09:26:00Z",
+          "payload": {
+            "finding_count": 1,
+            "condition": "unsupported_claim"
+          }
+        },
+        {
+          "event_id": "evt-9df0b22a6b6b",
+          "packet_id": "021",
+          "event_type": "finding_resolved",
+          "actor_type": "recruiter",
+          "occurred_at": "2026-08-30T09:36:00Z",
+          "payload": {
+            "review_id": "review-021",
+            "condition": "unsupported_claim"
+          }
+        },
+        {
+          "event_id": "evt-05867fb9cbeb",
+          "packet_id": "021",
+          "event_type": "brief_exported",
+          "actor_type": "recruiter",
+          "occurred_at": "2026-08-30T09:39:00Z",
+          "payload": {
+            "rework_count": 1,
+            "evidence_only": true
+          }
+        }
+      ]
+    },
+    {
+      "packet_id": "022",
+      "profile_id": "small_team",
+      "role_family": "product_engineering",
+      "condition": "work_mode_mismatch",
+      "consent_status": "granted",
+      "synthetic_only": true,
+      "ground_truth_expected_blocking": true,
+      "events": [
+        {
+          "event_id": "evt-19ead9220e8e",
+          "packet_id": "022",
+          "event_type": "packet_ingested",
+          "actor_type": "system",
+          "occurred_at": "2026-08-30T09:22:00Z",
+          "payload": {
+            "source": "folder"
+          }
+        },
+        {
+          "event_id": "evt-0a1beaf57960",
+          "packet_id": "022",
+          "event_type": "consent_recorded",
+          "actor_type": "system",
+          "occurred_at": "2026-08-30T09:23:00Z",
+          "payload": {
+            "purpose": "recruiting_review",
+            "scope_count": 5
+          }
+        },
+        {
+          "event_id": "evt-74bc796a0a27",
+          "packet_id": "022",
+          "event_type": "review_requested",
+          "actor_type": "system",
+          "occurred_at": "2026-08-30T09:27:00Z",
+          "payload": {
+            "finding_count": 1,
+            "condition": "work_mode_mismatch"
+          }
+        },
+        {
+          "event_id": "evt-26f507293239",
+          "packet_id": "022",
+          "event_type": "finding_resolved",
+          "actor_type": "recruiter",
+          "occurred_at": "2026-08-30T09:37:00Z",
+          "payload": {
+            "review_id": "review-022",
+            "condition": "work_mode_mismatch"
+          }
+        },
+        {
+          "event_id": "evt-2cd9108f3438",
+          "packet_id": "022",
+          "event_type": "brief_exported",
+          "actor_type": "recruiter",
+          "occurred_at": "2026-08-30T09:40:00Z",
+          "payload": {
+            "rework_count": 1,
+            "evidence_only": true
+          }
+        }
+      ]
+    },
+    {
+      "packet_id": "023",
+      "profile_id": "small_team",
+      "role_family": "data_ml_infrastructure",
+      "condition": "sponsorship_routing",
+      "consent_status": "granted",
+      "synthetic_only": true,
+      "ground_truth_expected_blocking": false,
+      "events": [
+        {
+          "event_id": "evt-9ddc666085b7",
+          "packet_id": "023",
+          "event_type": "packet_ingested",
+          "actor_type": "system",
+          "occurred_at": "2026-08-30T09:23:00Z",
+          "payload": {
+            "source": "folder"
+          }
+        },
+        {
+          "event_id": "evt-cec86114e588",
+          "packet_id": "023",
+          "event_type": "consent_recorded",
+          "actor_type": "system",
+          "occurred_at": "2026-08-30T09:24:00Z",
+          "payload": {
+            "purpose": "recruiting_review",
+            "scope_count": 5
+          }
+        },
+        {
+          "event_id": "evt-a0e574453a39",
+          "packet_id": "023",
+          "event_type": "brief_exported",
+          "actor_type": "recruiter",
+          "occurred_at": "2026-08-30T09:41:00Z",
+          "payload": {
+            "rework_count": 0,
+            "evidence_only": true
+          }
+        }
+      ]
+    },
+    {
+      "packet_id": "024",
+      "profile_id": "small_team",
+      "role_family": "security_reliability",
+      "condition": "hard_negative",
+      "consent_status": "granted",
+      "synthetic_only": true,
+      "ground_truth_expected_blocking": false,
+      "events": [
+        {
+          "event_id": "evt-c1d94442dac2",
+          "packet_id": "024",
+          "event_type": "packet_ingested",
+          "actor_type": "system",
+          "occurred_at": "2026-08-30T09:24:00Z",
+          "payload": {
+            "source": "folder"
+          }
+        },
+        {
+          "event_id": "evt-595a53ef9a7a",
+          "packet_id": "024",
+          "event_type": "consent_recorded",
+          "actor_type": "system",
+          "occurred_at": "2026-08-30T09:25:00Z",
+          "payload": {
+            "purpose": "recruiting_review",
+            "scope_count": 5
+          }
+        },
+        {
+          "event_id": "evt-b3e5a297d179",
+          "packet_id": "024",
+          "event_type": "brief_exported",
+          "actor_type": "recruiter",
+          "occurred_at": "2026-08-30T09:42:00Z",
+          "payload": {
+            "rework_count": 0,
+            "evidence_only": true
+          }
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "schema_version": "ops.metrics.v1",
+    "benchmark_id": "evidence-operations-24",
+    "packet_count": 24,
+    "metrics": {
+      "packet_count": 24,
+      "packets_requiring_review": 15,
+      "review_rate": 0.625,
+      "median_review_minutes": 10.0,
+      "average_review_minutes": 10.0,
+      "total_findings_reviewed": 15,
+      "rework_events": 6,
+      "consent_completeness_rate": 0.875,
+      "brief_export_rate": 1.0
+    },
+    "by_profile": [
+      {
+        "profile_id": "enterprise",
+        "packet_count": 8,
+        "packets_requiring_review": 5,
+        "review_rate": 0.625,
+        "median_review_minutes": 10.0,
+        "average_review_minutes": 10.0,
+        "total_findings_reviewed": 5,
+        "rework_events": 2,
+        "consent_completeness_rate": 0.875,
+        "brief_export_rate": 1.0
+      },
+      {
+        "profile_id": "small_team",
+        "packet_count": 8,
+        "packets_requiring_review": 5,
+        "review_rate": 0.625,
+        "median_review_minutes": 10.0,
+        "average_review_minutes": 10.0,
+        "total_findings_reviewed": 5,
+        "rework_events": 2,
+        "consent_completeness_rate": 0.875,
+        "brief_export_rate": 1.0
+      },
+      {
+        "profile_id": "startup",
+        "packet_count": 8,
+        "packets_requiring_review": 5,
+        "review_rate": 0.625,
+        "median_review_minutes": 10.0,
+        "average_review_minutes": 10.0,
+        "total_findings_reviewed": 5,
+        "rework_events": 2,
+        "consent_completeness_rate": 0.875,
+        "brief_export_rate": 1.0
+      }
+    ],
+    "packet_rows": [
+      {
+        "packet_id": "001",
+        "profile_id": "startup",
+        "review_required": false,
+        "review_minutes": null,
+        "finding_count": 0,
+        "rework_count": 0,
+        "consent_complete": true,
+        "exported": true
+      },
+      {
+        "packet_id": "002",
+        "profile_id": "startup",
+        "review_required": true,
+        "review_minutes": 10.0,
+        "finding_count": 1,
+        "rework_count": 0,
+        "consent_complete": true,
+        "exported": true
+      },
+      {
+        "packet_id": "003",
+        "profile_id": "startup",
+        "review_required": true,
+        "review_minutes": 10.0,
+        "finding_count": 1,
+        "rework_count": 0,
+        "consent_complete": false,
+        "exported": true
+      },
+      {
+        "packet_id": "004",
+        "profile_id": "startup",
+        "review_required": true,
+        "review_minutes": 10.0,
+        "finding_count": 1,
+        "rework_count": 0,
+        "consent_complete": true,
+        "exported": true
+      },
+      {
+        "packet_id": "005",
+        "profile_id": "startup",
+        "review_required": true,
+        "review_minutes": 10.0,
+        "finding_count": 1,
+        "rework_count": 1,
+        "consent_complete": true,
+        "exported": true
+      },
+      {
+        "packet_id": "006",
+        "profile_id": "startup",
+        "review_required": true,
+        "review_minutes": 10.0,
+        "finding_count": 1,
+        "rework_count": 1,
+        "consent_complete": true,
+        "exported": true
+      },
+      {
+        "packet_id": "007",
+        "profile_id": "startup",
+        "review_required": false,
+        "review_minutes": null,
+        "finding_count": 0,
+        "rework_count": 0,
+        "consent_complete": true,
+        "exported": true
+      },
+      {
+        "packet_id": "008",
+        "profile_id": "startup",
+        "review_required": false,
+        "review_minutes": null,
+        "finding_count": 0,
+        "rework_count": 0,
+        "consent_complete": true,
+        "exported": true
+      },
+      {
+        "packet_id": "009",
+        "profile_id": "enterprise",
+        "review_required": false,
+        "review_minutes": null,
+        "finding_count": 0,
+        "rework_count": 0,
+        "consent_complete": true,
+        "exported": true
+      },
+      {
+        "packet_id": "010",
+        "profile_id": "enterprise",
+        "review_required": true,
+        "review_minutes": 10.0,
+        "finding_count": 1,
+        "rework_count": 0,
+        "consent_complete": true,
+        "exported": true
+      },
+      {
+        "packet_id": "011",
+        "profile_id": "enterprise",
+        "review_required": true,
+        "review_minutes": 10.0,
+        "finding_count": 1,
+        "rework_count": 0,
+        "consent_complete": false,
+        "exported": true
+      },
+      {
+        "packet_id": "012",
+        "profile_id": "enterprise",
+        "review_required": true,
+        "review_minutes": 10.0,
+        "finding_count": 1,
+        "rework_count": 0,
+        "consent_complete": true,
+        "exported": true
+      },
+      {
+        "packet_id": "013",
+        "profile_id": "enterprise",
+        "review_required": true,
+        "review_minutes": 10.0,
+        "finding_count": 1,
+        "rework_count": 1,
+        "consent_complete": true,
+        "exported": true
+      },
+      {
+        "packet_id": "014",
+        "profile_id": "enterprise",
+        "review_required": true,
+        "review_minutes": 10.0,
+        "finding_count": 1,
+        "rework_count": 1,
+        "consent_complete": true,
+        "exported": true
+      },
+      {
+        "packet_id": "015",
+        "profile_id": "enterprise",
+        "review_required": false,
+        "review_minutes": null,
+        "finding_count": 0,
+        "rework_count": 0,
+        "consent_complete": true,
+        "exported": true
+      },
+      {
+        "packet_id": "016",
+        "profile_id": "enterprise",
+        "review_required": false,
+        "review_minutes": null,
+        "finding_count": 0,
+        "rework_count": 0,
+        "consent_complete": true,
+        "exported": true
+      },
+      {
+        "packet_id": "017",
+        "profile_id": "small_team",
+        "review_required": false,
+        "review_minutes": null,
+        "finding_count": 0,
+        "rework_count": 0,
+        "consent_complete": true,
+        "exported": true
+      },
+      {
+        "packet_id": "018",
+        "profile_id": "small_team",
+        "review_required": true,
+        "review_minutes": 10.0,
+        "finding_count": 1,
+        "rework_count": 0,
+        "consent_complete": true,
+        "exported": true
+      },
+      {
+        "packet_id": "019",
+        "profile_id": "small_team",
+        "review_required": true,
+        "review_minutes": 10.0,
+        "finding_count": 1,
+        "rework_count": 0,
+        "consent_complete": false,
+        "exported": true
+      },
+      {
+        "packet_id": "020",
+        "profile_id": "small_team",
+        "review_required": true,
+        "review_minutes": 10.0,
+        "finding_count": 1,
+        "rework_count": 0,
+        "consent_complete": true,
+        "exported": true
+      },
+      {
+        "packet_id": "021",
+        "profile_id": "small_team",
+        "review_required": true,
+        "review_minutes": 10.0,
+        "finding_count": 1,
+        "rework_count": 1,
+        "consent_complete": true,
+        "exported": true
+      },
+      {
+        "packet_id": "022",
+        "profile_id": "small_team",
+        "review_required": true,
+        "review_minutes": 10.0,
+        "finding_count": 1,
+        "rework_count": 1,
+        "consent_complete": true,
+        "exported": true
+      },
+      {
+        "packet_id": "023",
+        "profile_id": "small_team",
+        "review_required": false,
+        "review_minutes": null,
+        "finding_count": 0,
+        "rework_count": 0,
+        "consent_complete": true,
+        "exported": true
+      },
+      {
+        "packet_id": "024",
+        "profile_id": "small_team",
+        "review_required": false,
+        "review_minutes": null,
+        "finding_count": 0,
+        "rework_count": 0,
+        "consent_complete": true,
+        "exported": true
+      }
+    ],
+    "safety_boundary": "Operational workflow metrics only; no candidate quality, suitability, ranking, or hiring outcome is inferred."
+  }
+}

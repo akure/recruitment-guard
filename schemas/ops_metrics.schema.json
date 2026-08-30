@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RecruitmentGuardOperationalMetrics",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "benchmark_id", "packet_count", "metrics", "by_profile", "safety_boundary"],
+  "properties": {
+    "schema_version": {"const": "ops.metrics.v1"},
+    "benchmark_id": {"type": "string"},
+    "packet_count": {"type": "integer", "minimum": 0},
+    "metrics": {"type": "object"},
+    "by_profile": {"type": "array", "items": {"type": "object"}},
+    "safety_boundary": {"const": "Operational workflow metrics only; no candidate quality, suitability, ranking, or hiring outcome is inferred."}
+  }
+}
