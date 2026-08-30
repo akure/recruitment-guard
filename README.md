@@ -105,6 +105,7 @@ data/packet_NN
 ## Current documents
 
 - [Approved problem brief](docs/01-problem-statement.md)
+- [V2 maturity roadmap](docs/V2-MATURITY-ROADMAP.md)
 - [Changelog](CHANGELOG.md)
 
 Reproduction commands, evaluation results, trajectories, human checkpoint mechanics, and the video outline will be added in subsequent sprint checkpoints.
